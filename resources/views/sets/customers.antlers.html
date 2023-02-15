@@ -1,25 +1,5 @@
-<!-- Start Our Customers Section -->
 
-<!-- <div class="w-full">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 parent-content">
-        <div class="p-4">
-            <h2 class="font-bold main-title text-left f-purple">{{customer_sec_title}}</h2>
-        </div>
-        <div class="p-4">
-            <section class="customer-logos slider">
-                {{ customers_img }}
-                <div class="slide"><img src="{{ url }}" alt="{{ alt }}"></div>
-                {{ /customers_img }}
-            </section>
-        </div>
-    </div>
-</div> -->
-<!-- End Our Customers Section -->
-
-
-
-
-<!-- Schools that have set up an xQ video Lab big -->
+<!-- Start Our Customers Section big -->
 <div class="w-full mx-auto customers-section-big">
     <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 parent-content">
         <div class="p-4">
@@ -34,17 +14,7 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
+<!-- End Our Customers Section -->
 <script>
 
     $(document).ready(function () {
@@ -55,8 +25,10 @@
             autoplay: true,
             autoplaySpeed: 1500,
             arrows: true,
-            prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa fa-arrow-circle-left"></i></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"><i class="fa fa-arrow-circle-right"></i></button>',
+            prevArrow: `<button class="slide-arrow prev-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid icon-color">
+                            chevron_left</span></button>`,
+            nextArrow: `<button class="slide-arrow next-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color">
+                            chevron_right</span></button>`,
             dots: false,
             pauseOnHover: false,
             responsive: [{
