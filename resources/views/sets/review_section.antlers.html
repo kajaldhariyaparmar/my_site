@@ -29,23 +29,19 @@
     <div class="whtfloatsec">
         <div class="reviews-slider slider">
             {{reviews}}
-                {{if description != ''}}
-                    <div>
-                        <p>{{description}}</p>
-                        <p>{{name}}</p>
-                        <p>{{position}}</p>
-                        <div class="forar"> <span
-                            class="material-symbols-outlined rounded-full p-0 border-slate-300 border-solid   border-2">
-                            chevron_right
-                        </span></div>
-                    </div>
-                {{/if}}
+            {{if description != ''}}
+            <div>
+                <p>{{description}}</p>
+                <p>{{name}}</p>
+                <p>{{position}}</p>
+            </div>
+            {{/if}}
             {{/reviews}}
         </div>
-        
+
         <div class="forqutes"><span class="material-icons">
-            format_quote
-        </span></div>
+                format_quote
+                </span></div>
     </div>
 </div>
 
@@ -53,7 +49,7 @@
 
 <div class="w-full mx-auto bg-purple revfor-small">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 revpad">
-        <div class="p-4">
+        <div class="p-4 text-g">
             <p class="white-lable-head2">
                 {{ review_title }}
             </p>
@@ -76,7 +72,7 @@
 
     </div>
     <div class="whtfloatsec-s ">
-        <p>Video-creation engages a child’s
+        <!-- <p>Video-creation engages a child’s
             intelligence in multiple ways. And helps learning academic concepts in a much
             more immersive and holistic way.</p>
         <p>Siddhartha</p>
@@ -84,7 +80,19 @@
         <div class="forar"> <span
                 class="material-symbols-outlined rounded-full p-0 border-slate-300 border-solid   border-2">
                 chevron_right
-            </span></div>
+            </span></div> -->
+        <div class="reviews-slider-sm slider">
+            {{reviews}}
+            {{if description != ''}}
+            <div>
+                <p>{{description}}</p>
+                <p>{{name}}</p>
+                <p>{{position}}</p>
+            </div>
+            {{/if}}
+            {{/reviews}}
+        </div>
+
         <div class="forqutes"><span class="material-icons">
                 format_quote
             </span></div>
@@ -98,11 +106,12 @@
         $('.reviews-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 2500,
-            arrows: false,
-            //prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa-solid fa-solid fa-circle-chevron-left"></i></button>',
-            //nextArrow: '<button class="slide-arrow next-arrow"><i class="fa-solid fa-circle-chevron-right"></i></button>',
+            arrows: true,
+            prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+            nextArrow: `<button class="slide-arrow next-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color">
+                            chevron_right</span></button>`,
             dots: false,
             //dotsClass: 'slick-dots',
             pauseOnHover: false,
@@ -119,6 +128,36 @@
                 }
             }]
         });
+
+
+        $('.reviews-slider-sm').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2500,
+            arrows: true,
+            prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+            nextArrow: `<button class="slide-arrow next-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color">
+                            chevron_right</span></button>`,
+            dots: false,
+            //dotsClass: 'slick-dots',
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 785,
+                settings: {
+                    slidesToShow: 1
+
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+
+
+
     });
 </script>
 <script>
