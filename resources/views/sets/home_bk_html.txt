@@ -1,0 +1,326 @@
+<!-- Start About-us Section -->
+        {{ if index == 1 }}
+            <div class="w-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2 lg:gap-4 parent-content content-pb">
+                    <div>
+                        {{ if about_us_title }}
+                            <p class="my-heads">{{ about_us_title }}</p>
+                        {{/if}}
+                        {{ if about_us_desc }}
+                            {{ about_us_desc }}
+                            <button class="about-btn">Corious? Get us to call you back</button>
+                        {{ /if}}
+                    </div>
+                    {{ if about_video_desc }}
+                    <div class="pt-4">
+                            {{about_us_video}}
+                            <video width="100%" height="300px" controls>
+                                <source src="{{url}}" type="video/mp4">
+                            </video>
+                            {{/about_us_video}}
+                        <div class="vid-btm-sty">{{about_video_desc}}</div>
+                    </div>
+                    {{/if}}
+                    <button class="about-btn1">Corious? Get us to call you back</button>
+                </div>
+            </div>
+        {{/if}}
+        <!-- End About-us Section -->
+
+        <!-- Start How xQ Labs Work Section -->
+        {{ if index == 2 }}
+            <div class="w-full bg-purple display-none">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 parent-content">
+                    <div class="parrent">
+                        <div class="child-div-1">
+                            {{if how_work_imgs}}
+                            {{ how_work_imgs }}
+                                {{ if first }}
+                                    {{offering_image}}
+                                        <img src="{{ url }}" alt="{{ alt }}" />
+                                    {{ /offering_image }}
+                                    <div class="vid-btm-sty1">{{img_desc}}</div>
+                                {{/if}}
+                            {{/how_work_imgs}}
+                            {{/if}}
+                        </div>
+                        <div class="child-div-2">
+                            {{if how_work_imgs}}
+                                {{how_work_imgs}}
+                                    {{ if index != 0 && index != 3}}
+                                        <div>
+                                            {{offering_image}}
+                                                <img src="{{ url }}" alt="{{ alt }}" />
+                                            {{ /offering_image }}
+                                            <div class="vid-btm-sty1">{{img_desc}}</div>
+                                        </div>
+                                    {{/if}}
+                                {{/how_work_imgs}}
+                            {{/if}}
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <p class="white-lable-head">
+                            {{ how_work_main_title }}
+                        </p>
+                        <!-- <p class="white24">{{ $bard_field }}</p> -->
+                        <div class="title">{{ how_work_description }}</div>
+                        {{if how_work_desc_image}}
+                            {{ how_work_desc_image }}
+                                <img src="{{ url }}" alt="{{ alt }}" class="image-hidden" />
+                            {{ /how_work_desc_image }}
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        {{ /if}}
+        <!-- End How xQ Labs Work Section -->
+
+        <!-- Start Our Customers Section -->
+        {{ if index == 3 }}
+        <div class="w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 parent-content">
+                <div class="p-4">
+                    <h2 class="font-bold main-title text-left f-purple">{{customer_sec_title}}</h2>
+                </div>
+                <div class="p-4">
+                    <section class="customer-logos slider">
+                        {{ customers_img }}
+                        <div class="slide"><img src="{{ url }}" alt="{{ alt }}"></div>
+                        {{ /customers_img }}
+                    </section>
+                </div>
+            </div>
+        </div>
+        {{ /if}}
+        <!-- End Our Customers Section -->
+
+        <!-- Start Reviews Section -->
+        {{ if index == 4 }}
+        <div class="w-full bg-purple">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 parent-content content-pb">
+                <div class="p-4">
+                    {{review_video}}
+                    <video width="100%" height="300px" controls>
+                        <source src="{{url}}" type="video/mp4">
+                    </video>
+                    {{/review_video}}
+                    <div class="vid-btm-sty2">{{review_video_desc}}</div>
+                </div>
+                <div class="p-4">
+                    <p class="white-lable-head2">
+                        {{ review_title }}
+                    </p>
+                    <p class="white242">{{ review_sub_title }}</p>
+                    <div class="title">{{ review_desc }}</div>
+                </div>
+            </div>
+            <div class="whtfloatsec ">
+                <p>Video-creation engages a child’s
+                    intelligence in multiple ways. And helps learning academic concepts in a much
+                    more immersive and holistic way.</p>
+                <p>Siddhartha</p>
+                <p>Chief Education Officer, DPS Nashik</p>
+                <div> <span class="material-symbols-outlined rounded-full p-0 border-slate-300 border-solid   border-2">
+                        chevron_right
+                    </span></div>
+        
+            </div>
+        </div>
+        {{ /if}}
+        <!-- End Reviews Section -->
+
+        <!-- Start Features For Students Section -->
+        {{ if index == 5 }}
+        <div class="w-full">
+            <h2 class="font-bold main-title f-purple">{{fea_stu_main_title}}</h2>
+            <div class="gap-12 features-sec">
+                {{stu_features_content}}
+                {{if stu_fea_image!= ''}}
+                <div>
+                    <div class="card">
+                        {{ stu_fea_image }}
+                            <img src="{{ url }}" alt="{{ alt }}" style="width:100%">
+                        {{ /stu_fea_image }}
+                        <div class="card-content">
+                            {{fea_img_desc}}
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+                {{/stu_features_content}}
+            </div>
+        </div>
+        {{ /if}}
+        <!-- End Features For Students Section -->
+        
+        {{ if index == 6 }}
+        <!-- Start Features For School Section -->
+        <div class="w-full mx-auto bg-gray-100">
+            <div class="parent-content">
+                <h2 class="font-bold main-title f-purple">{{fea_school_main_title}}</h2>
+                <div class="lifeSkilldg">
+                    {{fea_school_img}}
+                    <img src="{{ url }}" alt="{{ alt }}">
+                    {{/fea_school_img}}
+                </div>
+            </div>
+            <div class="bg-yellow text-center">{{fea_sch_img_desc}}</div>
+        </div>
+        <!-- End Features For School Section -->
+        {{ /if }}
+        <!-- Start News Section -->
+        {{ if index == 7 }}
+        <div class="w-full">
+            <div class="parent-content content-pb">
+                <h2 class="main-title f-purple">{{news_sec_title}}</h2>
+                <section class="news-logos slider">
+                    {{ news_brand_logo }}
+                    <div class="slide"><img class="news-logo-img" src="{{ url }}" alt="{{ alt }}"></div>
+                    {{ /news_brand_logo }}
+                </section>
+            </div>
+        </div>
+        {{/if}}
+        <!-- End News Section-->
+
+        <!-- Start Contact-Us Section -->
+        {{ if index == 8 }}
+        <div class="w-full bg-purple">
+            <h2 class="font-bold title sub-title">{{contact_us_main_title}}</h2>
+            <div class="contact-us parent-content">
+                <div class="contact-us-div1">
+                    {{contact_us_img}}
+                        {{ if contact_us_img != ''}}
+                        <img src="{{ url }}" alt="{{ alt }}" class="image-hidden1" />
+                        {{/if}}
+                    {{/contact_us_img}}
+                </div>
+                <div class="contact-us-div2">
+                    {{ form:contact_form}}
+                    {{ if success }}
+                    <h2 class="text-green-600 mb-0 pb-0 text-center">
+                        {{ success }}
+                        {{ else }}
+
+                        {{ if errors }}
+                        <div class="bg-red-300 text-white p-2">
+                            {{ errors }}
+                            {{ value }}<br>
+                            {{ /errors }}
+                        </div>
+                        {{ /if }}
+
+                        {{ fields }}
+                        <div class="form-field">
+                            <label>{{ display }}</label>
+                            {{ field }}
+                            {{ if error }}
+                            <p class="text-red-600">{{ error }}</p>
+                            {{ /if }}
+                        </div>
+                        {{ /fields }}
+
+                        <input type="text" class="hidden " name="{{ honeypot ?? 'honeypot' }}">
+                        <button type="submit" class="submit-button">Submit</button>
+                        {{ /if }}
+                        {{ /form:contact_form }}
+                </div>
+            </div>
+        </div>
+        {{/if}}
+        <!-- End Contact-Us Section-->
+        {{ if index == 9}}
+        <!-- Start About xQ Section -->
+        <div class="w-full">
+            <div class="parent-content">
+                <h2 class="font-bold main-title f-purple">{{about_xq_main_title}}</h2>
+                <div class="text-center about-xq-desc">{{about_xq_desc}}</div>
+                <div class="py-8 about-xq-grid">
+                    <!-- <div class="extra-div"></div> -->
+                    {{founder_desc}}
+                    {{if logo != ''}}
+                    <div class="about-xq-img">
+                        {{ logo }}
+                        <img src="{{ url }}" style="width: 50px; height: 50px;">
+                        {{ /logo }}
+                        <div class="about-xq-text">{{logo_text}}</div>
+                    </div>
+                    {{/if}}
+                    {{/founder_desc}}
+                    <!-- <div class="extra-div"></div> -->
+                </div>
+            </div>
+        </div>
+        {{/if}}
+        <!-- End About xQ Section-->
+        
+        <!-- Start Founder Team Section-->
+        {{ if index == 10}}
+        <div class="w-full mx-auto bg-purple mt-8 py-5" style="border: 1px solid #793ef0;">
+            <div class="slider-content">
+                {{if type == "founder_team"}}
+                <div class="f-team-title">{{team_main_title}}</div>
+                <section class="founder-imgs slider">
+                    {{ profile_section }}
+                    {{if name != ''}}
+                    <div class="slide">
+                        <div class="grid grid-cols-2 md:grid-cols-2 gap-4 about-xq-grid">
+                            <div style="width: 100%;">
+                                {{profile}}
+                                <img class="founder-img" src="{{ url }}" alt="{{ alt }}">
+                                {{/profile}}
+                            </div>
+                            <div style="width: 100%;">
+                                <span class="font-yellow">{{name}}</span><br />
+                                <span class="title">{{post}}</span><br />
+                                <span class="title1">{{profile_desc}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {{/if}}
+                    {{ /profile_section }}
+                </section>
+                {{/if}}
+            </div>
+        </div>
+        {{/if}}
+        <!-- End Founder Team Section -->
+
+        <!-- Start Advisor Team Section-->
+        {{ if index == 11}}
+        
+        <div class="w-full mx-auto bg-purple py-5" style="border: 1px solid #793ef0;">
+            <div class="slider-content">
+                {{if type == "board_of_advisor"}}
+                <div class="f-team-title">{{team_main_title}}</div>
+                <section class="founder-imgs slider">
+                    {{ profile_section }}
+                    {{if name != ''}}
+                    <div class="slide">
+                        <div class="grid grid-cols-2 md:grid-cols-2 gap-4 about-xq-grid">
+                            <div style="width: 100%;">
+                                {{profile}}
+                                <img class="founder-img" src="{{ url }}" alt="{{ alt }}">
+                                {{/profile}}
+                            </div>
+                            <div style="width: 100%;">
+                                <span class="font-yellow">{{name}}</span><br />
+                                <span class="title">{{post}}</span><br />
+                                <span class="title1">{{profile_desc}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {{/if}}
+                    {{ /profile_section }}
+                </section>
+                {{/if}}
+            </div>
+        </div>
+       
+        {{/if}}
+        <!-- End Advisor Team Section -->
+        {{ if index == 12}}
+            {{ partial src="layout/_footer" }} 
+        {{/if}}
+   
