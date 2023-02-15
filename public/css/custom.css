@@ -53,7 +53,7 @@ p {
     padding-bottom: 60px;
 }
 .parent-content {
-    padding: 60px 80px 0px 80px;
+    padding: 60px 80px 60px 80px;
     box-sizing: border-box;
 }
 
@@ -111,8 +111,9 @@ p {
     margin-bottom: 37px;
 }
 .image-hidden {
-    height: 274px;
-    padding-left: 56px;
+    width: 700%;
+    /* height: 274px !important; */
+    /* padding-left: 56px; */
     padding-top: 17px;
 }
 
@@ -457,12 +458,24 @@ input::placeholder {
     box-sizing: border-box;
     border-radius: 15px;
 }
+.for_fea_sch_pad {
+    margin-top: 87px;
+    padding: 60px 80px 0px 80px;
+}
 .card-content {
+    min-height: 85px;
     background-color: #ffed00;
-    /* border-radius: 0px 0px 15px 15px; */
-    padding-top: 5px;
-    padding-bottom: 10px;
-    height: 75px;
+    font-family: "Cera Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #000000;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .price {
@@ -697,7 +710,7 @@ input::placeholder {
 }
 
 .lifeSkilldg {
-    padding: 10px 80px 0px 80px;
+    padding: 40px 80px 0px 80px;
 }
 .icon1search {
     display: none !important;
@@ -712,9 +725,7 @@ input::placeholder {
     /* height: 586px;
     padding-bottom: 25px; */
 }
-.board-adviser1 .members-image {
-    border-radius: 0;
-}
+
 .bg-yellow {
     background-color: #ffed00;
 }
@@ -736,7 +747,7 @@ input::placeholder {
     font-family: "Cera Pro";
 }
 .how1 {
-    color: #ffed00;
+    color: #ffff00;
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
@@ -765,7 +776,7 @@ input::placeholder {
 }
 
 .white242 {
-    color: #ffed00;
+    color: #ffff00;
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
@@ -840,11 +851,16 @@ input::placeholder {
 .for-icon-width {
     max-width: 45px;
 }
-.icon-color{
-    color: #B2B3B3 !important;
-    border-color:#B2B3B3 ;
+.icon-color {
+    color: #b2b3b3 !important;
+    border-color: #b2b3b3;
     font-size: 14px;
     border-width: 1px;
+}
+.icon-color2 {
+    color: #b2b3b3 !important;
+    border-color: #b2b3b3;
+    font-size: 14px;
 }
 
 .whtfloatsec {
@@ -1212,7 +1228,7 @@ input::placeholder {
     padding: 10px 31px;
     border-radius: 23px;
 }
-.div-lkflt-sm > span > span {
+.div-lkflt-sm > span > p> strong {
     color: #feed00;
 }
 
@@ -1292,18 +1308,39 @@ input::placeholder {
     }
     .my-heads {
         font-size: 38px;
+        line-height: 47.6px;
     }
     p.how1 {
         font-size: 38px;
+        line-height: 47.6px;
     }
     p.how2 {
         font-size: 38px;
+        line-height: 47.6px;
     }
     p.white-lable-head2 {
         font-size: 38px;
+        line-height: 47.6px;
     }
     p.white242 {
         font-size: 38px;
+        line-height: 47.6px;
+    }
+
+    /* .image-hidden {
+        height: 378px ;
+    } */
+    .card-content {
+        background-color: #ffed00;
+        padding: 14px 53px;
+        height: 75px;
+        font-family: "Cera Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 17px;
+        text-align: center;
+        color: #000000;
     }
 }
 @media screen and (max-width: 768px) {
@@ -1835,7 +1872,7 @@ input::placeholder {
 
     .white242 {
         margin-top: 15px;
-        color: #ffed00;
+        color: #ffff00;
         font-style: normal;
         font-weight: 700;
         font-size: 24px !important;
@@ -1847,7 +1884,7 @@ input::placeholder {
     .revpad {
         padding: 40px 20px;
     }
-    
+
     /* ------------------- */
     .whtfloatsec-s {
         width: 75% !important;

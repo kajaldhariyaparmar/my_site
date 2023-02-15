@@ -29,19 +29,19 @@
     <div class="whtfloatsec">
         <div class="reviews-slider slider">
             {{reviews}}
-                {{if description != ''}}
-                    <div>
-                        <p>{{description}}</p>
-                        <p>{{name}}</p>
-                        <p>{{position}}</p>
-                    </div>
-                {{/if}}
+            {{if description != ''}}
+            <div>
+                <p>{{description}}</p>
+                <p>{{name}}</p>
+                <p>{{position}}</p>
+            </div>
+            {{/if}}
             {{/reviews}}
         </div>
-        
+
         <div class="forqutes"><span class="material-icons">
-            format_quote
-        </span></div>
+                format_quote
+                </span></div>
     </div>
 </div>
 
@@ -81,18 +81,17 @@
                 class="material-symbols-outlined rounded-full p-0 border-slate-300 border-solid   border-2">
                 chevron_right
             </span></div> -->
-            
-            <div class="reviews-slider-sm slider">
-                {{reviews}}
-                {{if description != ''}}
-                <div>
-                    <p>{{description}}</p>
-                    <p>{{name}}</p>
-                    <p>{{position}}</p>
-                </div>
-                {{/if}}
-                {{/reviews}}
+        <div class="reviews-slider-sm slider">
+            {{reviews}}
+            {{if description != ''}}
+            <div>
+                <p>{{description}}</p>
+                <p>{{name}}</p>
+                <p>{{position}}</p>
             </div>
+            {{/if}}
+            {{/reviews}}
+        </div>
 
         <div class="forqutes"><span class="material-icons">
                 format_quote
@@ -107,11 +106,12 @@
         $('.reviews-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 2500,
             arrows: true,
             prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"><i class="fa-solid fa-circle-chevron-right"></i></button>',
+            nextArrow: `<button class="slide-arrow next-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color">
+                            chevron_right</span></button>`,
             dots: false,
             //dotsClass: 'slick-dots',
             pauseOnHover: false,
@@ -133,11 +133,12 @@
         $('.reviews-slider-sm').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 2500,
             arrows: true,
             prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"><i class="fa-solid fa-circle-chevron-right"></i></button>',
+            nextArrow: `<button class="slide-arrow next-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color">
+                            chevron_right</span></button>`,
             dots: false,
             //dotsClass: 'slick-dots',
             pauseOnHover: false,
