@@ -1,4 +1,25 @@
 <!-- Start About xQ Section -->
+<!-- <div class="w-full">
+    <div class="parent-content">
+        <h2 class="font-bold main-title f-purple">{{about_xq_main_title}}</h2>
+        <div class="text-center about-xq-desc">{{about_xq_desc}}</div>
+        <div class="py-8 about-xq-grid">
+        
+            {{founder_desc}}
+            {{if logo != ''}}
+            <div class="about-xq-img">
+                {{ logo }}
+                <img src="{{ url }}" style="width: 50px; height: 50px;">
+                {{ /logo }}
+                <div class="about-xq-text">{{logo_text}}</div>
+            </div>
+            {{/if}}
+            {{/founder_desc}}
+        
+        </div>
+    </div>
+</div> -->
+<!-- End About xQ Section-->
 <div class="w-full mx-auto bg-white pb-8">
     <div class="parent-content">
         <h2 class="my-heads">{{about_xq_main_title}}</h2>
@@ -6,17 +27,16 @@
         <div class="py-8 about-xq-grid  ">
             <!-- <div class="extra-div"></div> -->
             {{founder_desc}}
-                {{if logo != ''}}
-                    <div class="about-xq-img">
-                        {{ logo }}
-                            <img src="{{ url }}" style="width: 65px; height: 65px;">
-                        {{ /logo }}
-                        <div class="about-xq-text">{{logo_text}}</div>
-                    </div>
-                {{/if}}
+            {{if logo != ''}}
+            <div class="about-xq-img">
+                {{ logo }}
+                <img src="{{ url }}" style="width: 65px; height: 65px;">
+                {{ /logo }}
+                <div class="about-xq-text">{{logo_text}}</div>
+            </div>
+            {{/if}}
             {{/founder_desc}}
             <!-- <div class="extra-div"></div> -->
         </div>
     </div>
 </div>
-<!-- End About xQ Section-->

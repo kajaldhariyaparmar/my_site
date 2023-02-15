@@ -1,0 +1,75 @@
+<!-- Start Our Customers Section -->
+
+<!-- <div class="w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 parent-content">
+        <div class="p-4">
+            <h2 class="font-bold main-title text-left f-purple">{{customer_sec_title}}</h2>
+        </div>
+        <div class="p-4">
+            <section class="customer-logos slider">
+                {{ customers_img }}
+                <div class="slide"><img src="{{ url }}" alt="{{ alt }}"></div>
+                {{ /customers_img }}
+            </section>
+        </div>
+    </div>
+</div> -->
+<!-- End Our Customers Section -->
+
+
+
+
+<!-- Schools that have set up an xQ video Lab big -->
+<div class="w-full mx-auto customers-section-big">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 parent-content">
+        <div class="p-4">
+            <h2 class="my-heads text-left">{{customer_sec_title}}</h2>
+        </div>
+        <div class="p-4">
+            <section class="customer-logos slider">
+                {{ customers_img }}
+                <div class="slide"><img src="{{ url }}" alt="{{ alt }}"></div>
+                {{ /customers_img }}
+            </section>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+    $(document).ready(function () {
+
+        $('.customer-logos').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: true,
+            prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa fa-arrow-circle-left"></i></button>',
+            nextArrow: '<button class="slide-arrow next-arrow"><i class="fa fa-arrow-circle-right"></i></button>',
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    });
+</script>

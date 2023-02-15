@@ -1,0 +1,98 @@
+<!-- Start Founder Team Section-->
+<!-- <div class="w-full mx-auto bg-purple mt-8 py-5" style="border: 1px solid #793ef0;">
+    <div class="slider-content">
+        {{if type == "founder_team"}}
+        <div class="f-team-title">{{team_main_title}}</div>
+        <section class="founder-imgs slider">
+            {{ profile_section }}
+            {{if name != ''}}
+            <div class="slide">
+                <div class="grid grid-cols-2 md:grid-cols-2 gap-4 about-xq-grid">
+                    <div style="width: 100%;">
+                        {{profile}}
+                        <img class="founder-img" src="{{ url }}" alt="{{ alt }}">
+                        {{/profile}}
+                    </div>
+                    <div style="width: 100%;">
+                        <span class="font-yellow">{{name}}</span><br />
+                        <span class="title">{{post}}</span><br />
+                        <span class="title1">{{profile_desc}}</span>
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+            {{ /profile_section }}
+        </section>
+        {{/if}}
+    </div>
+</div> -->
+<div class="w-full mx-auto bg-purple  board-adviser-par ">
+    {{if type == "founder_team"}}
+    <div class="team-title">{{team_main_title}}</div>
+    <div class="board-adviser">
+        {{ profile_section }}
+        {{if name != ''}}
+        <div>
+            <div class="sliders-slide">
+                <div class="slider-img-section">
+                    {{profile}}
+                    <img class="members-image" src="{{url}}" alt="member img">
+                    {{/profile}}
+                </div>
+                <div class="slider-text-section">
+                    <p>{{name}}</p>
+                    <p>{{post}}</p>
+                    <p>{{profile_desc}}</p>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+        {{ /profile_section }}
+    </div>
+    {{/if}}
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- End Founder Team Section -->
+
+<script>
+    $(document).ready(function () {
+
+        $('.board-adviser').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2500,
+            arrows: true,
+            prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa-solid fa-solid fa-circle-chevron-left"></i></button>',
+            nextArrow: '<button class="slide-arrow next-arrow"><i class="fa-solid fa-circle-chevron-right"></i></button>',
+            dots: false,
+            dotsClass: 'slick-dots',
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 785,
+                settings: {
+                    slidesToShow: 2
+
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 2
+                }
+            }]
+        });
+
+
+
+    });
+
+</script>

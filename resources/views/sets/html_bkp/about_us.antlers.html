@@ -1,0 +1,31 @@
+<!-- Start About-us Section -->
+<div class="w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2 lg:gap-4 parent-content content-pb">
+        <div>
+            {{ if about_us_title}}
+                <p class="my-heads py-4 md:py-8 lg:py-8">{{ about_us_title }}</p>
+            {{/if}}
+
+            {{ if about_us_desc }}
+            <div class="aboutus_text_feild">
+                {{ about_us_desc }}
+            </div>
+            {{/if}}
+            
+            <button class="about-btn">Curious? Have us call you back!</button>
+        </div>
+        {{ if about_video_desc }}
+        <div class="pt-4">
+            {{about_us_video}}
+                <div class="vid-btm-sty-small">{{about_video_desc}}</div>
+                <video width="100%" height="300px" controls>
+                    <source src="{{url}}" type="video/mp4">
+                </video>
+            {{/about_us_video}}
+            <div class="vid-btm-sty-big">{{about_video_desc}}</div>
+        </div>
+        {{/if}}
+        <button class="about-btn1">Curious? Have us call you back!</button>
+    </div>
+</div>
+<!-- End About-us Section -->

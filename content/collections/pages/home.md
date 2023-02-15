@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 49a762b8-3af8-4fac-aea2-ccd3373185c3
-updated_at: 1676444039
+updated_at: 1676454746
 blocks:
   -
     id: le2tryml
@@ -22,9 +22,8 @@ blocks:
   -
     id: le2c0h24
     banner_img:
-      - component_39.png
-      - component_39-1676264305.png
-      - component_39-1676264338.png
+      - bannee-img-big.png
+      - bannee-img-big-1.png
     type: banner
     enabled: true
   -
@@ -453,6 +452,8 @@ blocks:
             type: icon_and_count
             serve_title: 'Registerd Students'
             no_count: 60000
+            service_icon:
+              - reg-stud-icon.png
       -
         type: set
         attrs:
@@ -461,6 +462,8 @@ blocks:
             type: icon_and_count
             serve_title: 'Countries & Growing'
             no_count: 8
+            service_icon:
+              - country_icon.png
       -
         type: set
         attrs:
@@ -469,6 +472,8 @@ blocks:
             type: icon_and_count
             serve_title: 'School Partnerships'
             no_count: 30
+            service_icon:
+              - scholl_partner.png
       -
         type: set
         attrs:
@@ -477,6 +482,8 @@ blocks:
             type: icon_and_count
             serve_title: 'Mins Of Immersive Learning'
             no_count: 13000
+            service_icon:
+              - mins-learn.png
       -
         type: paragraph
     side_desc: 'Get a **Free Guide** on10 easy ways to make your school Video savvy'
