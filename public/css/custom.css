@@ -840,6 +840,12 @@ input::placeholder {
 .for-icon-width {
     max-width: 45px;
 }
+.icon-color{
+    color: #B2B3B3 !important;
+    border-color:#B2B3B3 ;
+    font-size: 14px;
+    border-width: 1px;
+}
 
 /* --------------------------------- */
 /* .whtfloatsec {
@@ -1869,6 +1875,7 @@ input::placeholder {
     .revpad {
         padding: 40px 20px;
     }
+    
     /* ------------------- */
     .whtfloatsec-s {
         width: 75% !important;
