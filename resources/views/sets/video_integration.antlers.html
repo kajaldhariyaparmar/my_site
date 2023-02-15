@@ -9,14 +9,14 @@
 
     <div class="vid-int-slider">
         {{vid_int_slider_videos}}
-        <div class="ab_vid_par " style="height: 220px; margin-left: 0px ; margin-right: 0px;">
-            {{ if vid_int_video | is_embeddable }}
-            <!-- <iframe class="vidint-vid" width="100%" height="220px" src="{{ vid_int_video | embed_url }}" ...></iframe> -->
-            <video class="vidint-vid" width="100%" height="220px">
-                <source src="{{ vid_int_video  }}">
-            </video>
-
-            {{ /if }}
+        <div class="ab_vid_par" style="height: 220px; margin-left: 0px ; margin-right: 0px;">
+            {{if vid_int_video != ""}}
+                {{vid_int_video}}
+                    <video class="vidint-vid" width="100%" height="220px">
+                        <source src="{{url}}" type="video/mp4">
+                    </video>
+                {{/vid_int_video}}
+            {{/if}}
             <button class="play_button_vidint">
                 <img src="/assets/play_button.png" alt="">
             </button>
@@ -53,8 +53,10 @@
             autoplay: false,
             autoplaySpeed: 2500,
             arrows: true,
-            prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa-solid fa-solid fa-circle-chevron-left"></i></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"><i class="fa-solid fa-circle-chevron-right"></i></button>',
+            prevArrow: `<button class="slide-arrow prev-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid icon-color">
+                            chevron_left</span></button>`,
+            nextArrow: `<button class="slide-arrow next-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color">
+                            chevron_right</span></button>`,
             dots: false,
             dotsClass: 'slick-dots',
             pauseOnHover: false,

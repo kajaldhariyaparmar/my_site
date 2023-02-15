@@ -846,7 +846,12 @@ input::placeholder {
     font-size: 14px;
     border-width: 1px;
 }
-
+.footer-title{
+    color: #FEED00;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
 /* --------------------------------- */
 /* .whtfloatsec {
     display: flex;
@@ -2171,5 +2176,11 @@ input::placeholder {
     .top-cont-img {
         z-index: -1;
         display: block !important;
+    }
+    .footer-title{
+        color: #FEED00;
+        font-size: 13px;
+        font-weight: 700
+        ;margin-bottom: 10px;
     }
 }

@@ -11,15 +11,6 @@ sections:
           validate:
             - required
       -
-        handle: custom_page_header
-        field:
-          default: false
-          display: 'Custom Page Header'
-          type: toggle
-          icon: toggle
-          instructions: 'Toggle this enable custom page header.'
-          listable: hidden
-      -
         handle: page_header
         field:
           display: 'Page Header'
@@ -88,7 +79,7 @@ sections:
             custom_page_header: 'equals true'
             has_subtitle: 'equals true'
       -
-       import: blocks
+        import: blocks
   sidebar:
     display: Sidebar
     fields:

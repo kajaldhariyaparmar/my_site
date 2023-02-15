@@ -1,8 +1,11 @@
-<!-- <div class="relative w-full overflow-hidden bg-black">
+<!-- footer section   -->
+<article class="mx-auto bg-black w-full footparrent ">
     <div class="grid grid-cols-2 md:px-4 gap-2 md:gap-4 lg:gap-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 py-5">
-        <div class="footlogodiv px-4">{{company_logo}}<img src="{{url}}" alt="">{{/company_logo}}</div>
+        <div class="footlogodiv px-4">
+            {{company_logo}}<img src="{{url}}" alt="">{{/company_logo}}
+        </div>
         <div class="text-start px-2 md:text-sm">
-            <div style="color: #FEED00;font-size: 20px;font-weight: 700;margin-bottom: 20px;">Get in Tuch</div>
+            <div class="footer-title">Get in Touch</div>
             <div class="flex flex-col gap-4">
                 <div class="flex flex-col lg:flex-row gap-4 text-white">
                     <div class="flex gap-4"><span class="material-symbols-outlined">
@@ -26,58 +29,12 @@
             </div>
         </div>
         <div class="forsocailpadding">
-            <div style="color: #FEED00;font-size: 20px;font-weight: 700;margin-bottom: 20px;">Follow Us</div>
-            <div class="flex gap-4">
-                {{social_media}}
-                    <div><a href="{{link}}"><img style="max-width: 50px;" src="{{social_media_logo}}" alt=""></a></div>
-                {{/social_media}}
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
-
-
-<!-- footer section   -->
-<article class="mx-auto bg-black w-full footparrent ">
-    <div class="grid grid-cols-2 md:px-4 gap-2 md:gap-4 lg:gap-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 py-5">
-        <div class="footlogodiv px-4">
-            <img src="https://xqvideolab.com/img/white-logo.svg" alt="footlogo">
-        </div>
-        <div class="text-start px-2 md:text-sm">
-            <div style="color: #FEED00;font-size: 20px;font-weight: 700;margin-bottom: 20px;">Get in Touch</div>
-            <div class="flex flex-col gap-4">
-                <div class="flex flex-col lg:flex-row gap-4 text-white">
-                    <div class="flex gap-4"><span class="material-symbols-outlined">
-                            call
-                        </span>
-                        +91 9930192049
-                    </div>
-                    <div class="flex gap-4"><span class="material-symbols-outlined">
-                            mail
-                        </span>
-                        info@learnwithxq.com
-                    </div>
-                </div>
-                <div class=" text-white">
-                    <div class="flex gap-4" style="max-width: 450px;"><span class="material-symbols-outlined">
-                            location_on
-                        </span>
-                        303, De Elmas, Sonawala Cross Lane, Goregaon East, Mumbai 400063
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="forsocailpadding">
             <div class="for-follow">Follow Us</div>
             <div class="flex gap-4">
-                <div><img class="for-icon-width" src="https://xqvideolab.com/img/icon-linkedin.svg" alt=""></div>
-                <div><img class="for-icon-width" src="https://xqvideolab.com/img/icon-insta.svg" alt=""></div>
-                <div><img class="for-icon-width" src="https://xqvideolab.com/img/icon-youtube.svg" alt=""></div>
+                {{social_media}}
+                    <div><a href="{{link}}"><img class="for-icon-width" src="{{social_media_logo}}" alt=""></a></div>
+                {{/social_media}}
             </div>
-
-
         </div>
     </div>
 </article>
@@ -89,37 +46,34 @@
         </div>
         <div>
             <div class="flex flex-col gap-4 py-2">
-                <p style="color: #FEED00;font-size: 13px;font-weight: 700;margin-bottom: 10px;">Get in Touch</p>
+                <p class="footer-title">Get in Touch</p>
 
                 <div class="flex flex-col lg:flex-row gap-4 text-white">
                     <div class="flex gap-2 md:gap-4 lg:gap-4"><span class="material-symbols-outlined">
                             call
                         </span>
-                        +91 9930192049
+                        <a href="tel:{{contact_no}}">{{contact_no}}</a>
                     </div>
                     <div class="flex gap-4"><span class="material-symbols-outlined">
                             mail
                         </span>
-                        info@learnwithxq.com
+                        <a href="mailto:{{company_email}}">{{company_email}}</a>
                     </div>
                 </div>
                 <div class=" text-white">
                     <div class="flex gap-4" style="max-width: 450px;"><span class="material-symbols-outlined">
                             location_on
                         </span>
-                        303, De Elmas, Sonawala Cross Lane, Goregaon East, Mumbai 400063
+                        {{company_address}}
                     </div>
                 </div>
                 <div class="forsocailpadding">
                     <div class="for-follow">Follow Us</div>
                     <div class="flex gap-4">
-                        <div><img class="for-icon-width" src="https://xqvideolab.com/img/icon-linkedin.svg" alt="">
-                        </div>
-                        <div><img class="for-icon-width" src="https://xqvideolab.com/img/icon-insta.svg" alt=""></div>
-                        <div><img class="for-icon-width" src="https://xqvideolab.com/img/icon-youtube.svg" alt=""></div>
+                        {{social_media}}
+                            <div><a href="{{link}}"><img class="for-icon-width" src="{{social_media_logo}}" alt=""></a></div>
+                        {{/social_media}}
                     </div>
-
-
                 </div>
             </div>
         </div>
