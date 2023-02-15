@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 49a762b8-3af8-4fac-aea2-ccd3373185c3
-updated_at: 1676468324
+updated_at: 1676479709
 blocks:
   -
     id: le2tryml
@@ -187,24 +187,14 @@ blocks:
           id: le44udyk
           values:
             type: video
-            vid_int_video:
-              - toistalgia---a-nostalgic-range-of-toys-1676275092.mp4
+            vid_int_video: toistalgia---a-nostalgic-range-of-toys-1676275092.mp4
       -
         type: set
         attrs:
           id: le44xr5o
           values:
             type: video
-            vid_int_video:
-              - toistalgia---a-nostalgic-range-of-toys-1676275092.mp4
-      -
-        type: set
-        attrs:
-          id: le44xxds
-          values:
-            type: video
-            vid_int_video:
-              - toistalgia---a-nostalgic-range-of-toys.mp4
+            vid_int_video: videoplayback.mp4
       -
         type: paragraph
     type: video_integration
