@@ -8,6 +8,23 @@
     <!-- Integrating video-making slider -->
 
     <div class="vid-int-slider">
+        {{vid_int_slider_videos}}
+
+        {{if vid_int_video}}
+        <div class="ab_vid_par" style="height: 220px; margin-left: 0px ; margin-right: 0px;">
+
+            <video class="vidint-vid" id="vidint-vid{{index}}" width="100%" height="220px"
+                onclick='play_pausAction_vi("{{index}}")''>
+                        <source src="{{vid_int_video}}" type="video/mp4">
+                    </video>
+                    
+                    
+                    <button class="play_button_vidint" id="play_button_vidint{{index}}" onclick='
+                play_pausAction_vi("{{index}}")''>
+                <img src="/assets/play_button.png" alt="">
+                </button>
+        </div>
+        {{/if}}
         {{vid_int_slider_videos }}
         <div class="ab_vid_par" style="height: 220px; margin-left: 0px ; margin-right: 0px;">
             {{if vid_int_video != ""}}
@@ -23,70 +40,63 @@
         </div>
         {{/vid_int_slider_videos}}
     </div>
-</div>
-<script>
+    <script>
 
-    // var playButton_vi = document.querySelector(".play_button_vidint");
-    // var video_vi = document.querySelector(".vidint-vid");
-    //     function pl            ausAction_vi(id) {
+        //var playButton_vi = document.querySelector(".play_button_vidint");
+        //var video_vi = document.querySelector(".vidint-vid");
 
-    //     console.log("play_pct_vi  id", id);
+        function play_pausAction_vi(id) {
 
+            var video_vi = document.querySelector("#vidint-vid" + id);
+            var playButton_vi = document.querySelector("#play_button_vidint" + id);
 
-    // }
-    // if (ideo_vi.p                                         ) {
-    //                          he video
-    //     video_vi.play();
+            if (video_vi.paused == true) {
+                // Play the video
+                //video_vi.play();
+                video_vi.play();
+                // Update the button text to 'Pause'
+                playButton_vi.innerHTML = "";
+            } else {
+                // Pause the video
+                video_vi.pause();
+                // Update the button text to 'Play'
+                playButton_vi.innerHTML = `<img src="/assets/play_button.png" alt="">`;
+            }
+        }
+        // Event listener for the play/pause button
+        //video_vi.addEventListener("click", play_pausAction_vi);
+        //playButton_vi.addEventListener("click", play_pausAction_vi)
 
-    //     // Update the button text to 'Pause'
-    //     playButton_vi.innerHTML = "";
-    // } else {
-    //     // Pause the video
-    //     video_vi.pause();
-
-    //     // Update the button text to 'Play'
-    //     playButton_vi.innerHTML = `<img src="/assets/play_button.png" alt="">`;
-    // }
-    // }
-    // Event listener for the play/pause button
-    // v                          ntList        ("click", play_pausAction_vi);
-    // playButton_vi.addEventListener("click", play_pausAction_vi)
-
-
-
-
-    
-
-    $(document).ready(function () {
+        $(document).ready(function () {
 
 
 
 
-        $('.vid-int-slider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: false,
-            autoplaySpeed: 2500,
-            arrows: true,
-            prevArrow: `<button class="slide-arrow prev-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid icon-color">
+            $('.vid-int-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 2500,
+                arrows: true,
+                prevArrow: `<button class="slide-arrow prev-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid icon-color">
                             chevron_left</span></button>`,
-            nextArrow: `<button class="slide-arrow next-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color">
+                nextArrow: `<button class="slide-arrow next-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color">
                             chevron_right</span></button>`,
-            dots: false,
-            dotsClass: 'slick-dots',
-            pauseOnHover: false,
-            responsive: [{
-                breakpoint: 785,
-                settings: {
-                    slidesToShow: 1
+                dots: true,
+                dotsClass: 'slick-dots',
+                pauseOnHover: false,
+                responsive: [{
+                    breakpoint: 785,
+                    settings: {
+                        slidesToShow: 1
 
-                }
-            }, {
-                breakpoint: 520,
-                settings: {
-                    slidesToShow: 1
-                }
-            }]
-        });
-    })
-</script>
+                    }
+                }, {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        })
+    </script>
