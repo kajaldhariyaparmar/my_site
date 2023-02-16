@@ -41,7 +41,7 @@
 
         <div class="forqutes"><span class="material-icons">
                 format_quote
-                </span></div>
+            </span></div>
     </div>
 </div>
 
@@ -103,6 +103,24 @@
 
 <script>
     $(document).ready(function () {
+        var playButton_rev = document.querySelector(".play_button_rev");
+        var video_rev = document.querySelector(".rev-vid");
+        function play_pausAction_rev() {
+            if (video_rev.paused == true) {
+                // Play the video_rev
+                video_rev.play();
+                // Update the button text to 'Pause'
+                playButton_rev.innerHTML = "";
+            } else {
+                // Pause the video_rev
+                video_rev.pause();
+                // Update the button text to 'Play'
+                playButton_rev.innerHTML = `<img src="/assets/play_button.png" alt="">`;
+            }
+        }
+        // Event listener for the play/pause button
+        video_rev.addEventListener("click", play_pausAction_rev);
+        playButton_rev.addEventListener("click", play_pausAction_rev)
         $('.reviews-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -159,28 +177,8 @@
 
 
     });
-</script>
-<script>
-    var playButton_rev = document.querySelector(".play_button_rev");
-    var video_rev = document.querySelector(".rev-vid");
-    function play_pausAction_rev() {
-        if (video_rev.paused == true) {
-            // Play the video_rev
-            video_rev.play();
 
-            // Update the button text to 'Pause'
-            playButton_rev.innerHTML = "";
-        } else {
-            // Pause the video_rev
-            video_rev.pause();
 
-            // Update the button text to 'Play'
-            playButton_rev.innerHTML = `<img src="/assets/play_button.png" alt="">`;
-        }
-    }
-    // Event listener for the play/pause button
-    video_rev.addEventListener("click", play_pausAction_rev);
-    playButton_rev.addEventListener("click", play_pausAction_rev)
 
     var playButton_rev1 = document.querySelector(".play_button_rev1");
     var video_rev1 = document.querySelector(".rev-vid1");

@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 49a762b8-3af8-4fac-aea2-ccd3373185c3
-updated_at: 1676468324
+updated_at: 1676531998
 blocks:
   -
     id: le2tryml
@@ -104,7 +104,7 @@ blocks:
     review_sub_title: 'Video-Making is a must-learn skill for everyone.'
     review_desc: 'We exist in an age where videos are rapidly becoming the preferred means of communication. Which means, video-making is no longer a hobby or a vocational subject meant for a few. Rather, it’s a non-negotiable skill for every child to able to communicate their ideas effectively in the 21st century.'
     review_video:
-      - toistalgia---a-nostalgic-range-of-toys-1676275092.mp4
+      - toistalgia---a-nostalgic-range-of-toys.mp4
     review_video_desc: 'Watch what leading educators have to say about video-making'
     type: review_section
     enabled: true
@@ -271,7 +271,7 @@ blocks:
     id: le2ncmu2
     contact_us_main_title: 'Let’s discuss how we can help your school become Video-Savvy'
     contact_us_img:
-      - shutterstock_1814238692-(1)-7.png
+      - component_32-removebg-preview.png
     contact_us_form: contact_form
     type: contact_us
     enabled: true
@@ -489,7 +489,7 @@ blocks:
               - mins-learn.png
       -
         type: paragraph
-    side_desc: 'Get a **Free Guide** on10 easy ways to make your school Video savvy'
+    side_desc: 'Get a **Free Guide** on 10 easy ways to make your school Video savvy'
     type: xq_serve
     enabled: true
   -
