@@ -20,7 +20,7 @@
     <div class="div-lkflt">
         <!-- <span>Get a <span> Free Guide</span> on 10 easy ways to make your school Video savvy</span> -->
         <span>{{side_desc}}</span>
-        <button>Get it Now</button>
+        <button onclick="showPopup()">Get it Now</button>
     </div>
 
 </div>
@@ -48,50 +48,58 @@
     <div class="div-lkflt-sm">
         <span>{{side_desc}}</span>
         <button onclick="showPopup()">Get it Now</button>
-        
-        </div>
-        
-        </div>
-        <div id="popup" style="display:none;">
-            <span onclick="hidePopup()" class="pop-up-close-btn">&#10005;</span>
-            <div class="pop-up-content-form" id="FormDiv" style="display: block;">
-                <p class="my-heads get-head-title text-center">Where should we email your free guide?</p>
-                <div class="get-it-form">
-                    {{ form:create in="ebook_form" id="test"}}
-                    <div id="success" style="display:none;"><p>Thanks...</p></div>
-                    <div id="failed" style="color:red;"></div>
-                    {{ if success }}
-                        <div id="success222"><p>Thanks...</p></div>
-                    {{ /if }}
-                    
-                    {{ fields }}
-                    <div class="form-field">
-                        <div class="form-row">
-                            <label for="fullName">{{ display }}</label>
-                            {{ field }}
-                        </div>
-                        <p class="text-red-600" id="{{handle}}">{{ error }}</p>
-                        {{ if error }}
-                            <p class="text-red-600" id="{{handle}}">{{ error }}</p>
-                        {{ /if }}
-                    </div>
-                    {{ /fields }}
-                    
-                    <div class="form-row2">
-                        <input type="text" class="hidden " name="{{ honeypot ?? 'honeypot' }}">
-                        <button type="submit" class="submit-button">Submit</button>
-                    </div>
-                    {{ /form:create }}
+
+    </div>
+
+</div>
+
+
+<div id="popup" style="display:none;">
+    <span onclick="hidePopup()" class="pop-up-close-btn">&#10005;</span>
+    <div class="pop-up-content-form">
+        <p class="my-heads get-head-title text-center px-6 md:px-4 lg:px-0" id="get-it-heading" style="display: block;">Where should we email your free guide?</p>
+        <div class="get-it-form" id="FormDiv" style="display: block;">
+            {{ form:create in="ebook_form" id="test"}}
+            <div id="success" style="display:none;">
+                <p>Thanks...</p>
+            </div>
+            <div id="failed" style="color:red;"></div>
+            {{ if success }}
+            <div id="success222">
+                <p>Thanks...</p>
+            </div>
+            {{ /if }}
+
+            {{ fields }}
+            <div class="form-field">
+                <div class="form-row">
+                    <label for="fullName">{{ display }}</label>
+                    {{ field }}
                 </div>
+                <p class="text-red-600" id="{{handle}}">{{ error }}</p>
+                {{ if error }}
+                <p class="text-red-600" id="{{handle}}">{{ error }}</p>
+                {{ /if }}
             </div>
-            <div id="SuccessDiv" style="display: none;">
-                <p>Helloo</p>
+            {{ /fields }}
+
+            <div class="form-row2">
+                <input type="text" class="hidden " name="{{ honeypot ?? 'honeypot' }}">
+                <button type="submit" class="submit-button">Submit</button>
             </div>
-            <img class="floating-mail-icon1" src="/assets/maillogo.png" alt="">
-            <img class="floating-mail-icon2" src="/assets/maillogo.png" alt="">
+            {{ /form:create }}
         </div>
+        <div id="SuccessDiv" style="display: none;">
+            <p>Helloo</p>
+        </div>
+    </div>
+    <img class="floating-mail-icon1" src="/assets/maillogo.png" alt="">
+    <img class="floating-mail-icon2" src="/assets/maillogo.png" alt="">
+</div>
+</div>
 <script>
-    
+
+    var form = document.getElementById('form');
     var popup = document.getElementById("popup");
     var cont_popup = document.getElementById("cont-popup");
     function hidePopup() {
@@ -111,26 +119,28 @@
             url: $("#test").attr('action'),
             type: 'POST',
             data: form_data,
-         }).done(function(response) {
+        }).done(function (response) {
             console.log(1)
             console.log(response);
-            
-            $('#failed').css('display','none');
-            $('#FormDiv').css('display','none')
-            $('#SuccessDiv').css('display','block')
-        }).fail(function(data) {
-            
+
+            $('#failed').css('display', 'none');
+            $('#FormDiv').css('display', 'none')
+            $('#get-it-heading').css('display', 'none')
+            $('#SuccessDiv').css('display', 'block')
+        }).fail(function (data) {
+
             var errors = [data.responseJSON.errors]
             var str = ""
-            
-            errors.forEach(function(error){
+
+            errors.forEach(function (error) {
                 console.log(error);
                 str += error
             })
-            str = str.replace(/\,/g,"<br>")
+            str = str.replace(/\,/g, "<br>")
             $('#failed').html(str);
-            $('#FormDiv').css('display','block')
-            $('#SuccessDiv').css('display','none')
+            $('#FormDiv').css('display', 'block')
+            $('#get-it-heading').css('display', 'block')
+            $('#SuccessDiv').css('display', 'none')
         });
     });
 </script>
