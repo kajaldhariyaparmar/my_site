@@ -11,3 +11,8 @@ preferences:
         - email
         - school_name
         - city
+    ebook_form:
+      columns:
+        - datestamp
+        - full_name
+        - email
