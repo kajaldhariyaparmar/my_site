@@ -18,7 +18,7 @@
             {{/contact_us_img}}
         </div>
         <div class="contact-us-div2">
-            {{ form:contact_form}}
+            {{ form:contact_form id="contact_us"}}
             {{ if success }}
             <h2 class="text-green-600 mb-0 pb-0 text-center">
                 {{ success }}
@@ -36,9 +36,7 @@
                 <div class="form-field">
                     <label>{{ display }}</label>
                     {{ field }}
-                    {{ if error }}
-                    <p class="text-red-600">{{ error }}</p>
-                    {{ /if }}
+                    <p class="text-red-600" id="{{handle}}_error">{{ error }}</p>
                 </div>
                 {{ /fields }}
                 <div class="submit-btn-supp">
@@ -51,19 +49,63 @@
         </div>
     </div>
 </div>
-<button onclick="showContactUsPopup()">Get it Now2</button>
+<!-- <button onclick="showContactUsPopup()">Get it Now2</button> -->
 <div id="cont-popup" style="display: none;">
     <span onclick="hideContactUsPopup()" class="pop-up-close-btn ">&#10005;</span>
     <img class="floating-mail-icon3" src="/assets/maillogo.png" alt="">
-
 </div>
-<script>       function showContactUsPopup() {
-        cont_popup.style.display = "block";
-        cont_popup.classList.add("for-get-pop-up")
+<script>  
+let fields = new Array();
 
-        // cont_popup.style.top = `${document.body.clientHeight} - 400px`
-    }
-    function hideContactUsPopup() {
-        cont_popup.style.display = "none";
-    }</script>
+let x = $("#contact_us").serializeArray();
+$.each(x, function(i, field) {
+    fields.push(field.name)
+});
+     
+function showContactUsPopup() {
+    cont_popup.style.display = "block";
+    cont_popup.classList.add("for-get-pop-up")
+    $('#contact_us').trigger("reset");
+    console.log(fields)
+    fields.forEach(function(name){
+        $('#'+name+'_error').html('');
+    })
+    // cont_popup.style.top = `${document.body.clientHeight} - 400px`
+}
+function hideContactUsPopup() {
+    cont_popup.style.display = "none";
+}
+
+$("#contact_us").submit(function( event ) {
+        event.preventDefault()
+        var form_data = $(this).serialize();
+        
+        $.ajax({
+            url: $("#contact_us").attr('action'),
+            type: 'POST',
+            data: form_data,
+         }).done(function(response) {
+            $('#failed').css('display','none');
+            showContactUsPopup()
+            $('#contact_us').trigger("reset");
+        }).fail(function(data) {
+            
+            var errors = [data.responseJSON.errors]
+            var error = [data.responseJSON.error]
+            $.each(error, function(key, value) {
+                $.each(value, function(index, value1){
+                    console.log(index)  
+                    console.log(value1)
+                    if ($.inArray(index,fields) >= 0) {
+                       $('#'+index+'_error').html(value1);
+                    } else {
+                        console.log(11)
+                        $('#'+index+'_error').html('');
+                    }
+                });
+            });
+            hideContactUsPopup() 
+        });
+    });
+</script>
 <!-- End Contact-Us Section-->

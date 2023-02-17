@@ -92,7 +92,6 @@
         </div>
 <script>
     
-    var form = document.getElementById('form');
     var popup = document.getElementById("popup");
     var cont_popup = document.getElementById("cont-popup");
     function hidePopup() {
@@ -101,10 +100,8 @@
     function showPopup() {
         popup.style.display = "block";
         popup.classList.add("for-get-pop-up")
-
         popup.style.top = `${document.body.clientHeight} - 400px`
     }
-    var form = document.getElementById('test');
     $("#test").submit(function( event ) {
         event.preventDefault()
         var form_data = $(this).serialize();
