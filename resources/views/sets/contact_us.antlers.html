@@ -1,9 +1,9 @@
 <!-- Start Contact-Us Section -->
 <div class="mx-auto top-cont-img">
     {{contact_us_img}}
-        {{ if contact_us_img != ''}}
-            <img class="image-contactus-small" src="{{url}}" alt="{{ alt }}" />
-        {{/if}}
+    {{ if contact_us_img != ''}}
+    <img class="image-contactus-small" src="{{url}}" alt="{{ alt }}" />
+    {{/if}}
     {{/contact_us_img}}
 </div>
 <div class="w-full mx-auto bg-purple z-10">
@@ -12,9 +12,9 @@
     <div class="contact-us">
         <div class="contact-us-div1">
             {{contact_us_img}}
-                {{ if contact_us_img != ''}}
-                    <img class="image-contactus" src="{{ url }}" alt="{{ alt }}" />
-                {{/if}}
+            {{ if contact_us_img != ''}}
+            <img class="image-contactus" src="{{ url }}" alt="{{ alt }}" />
+            {{/if}}
             {{/contact_us_img}}
         </div>
         <div class="contact-us-div2">
@@ -51,4 +51,19 @@
         </div>
     </div>
 </div>
+<button onclick="showContactUsPopup()">Get it Now2</button>
+<div id="cont-popup" style="display: none;">
+    <span onclick="hideContactUsPopup()" class="pop-up-close-btn ">&#10005;</span>
+    <img class="floating-mail-icon3" src="/assets/maillogo.png" alt="">
+
+</div>
+<script>       function showContactUsPopup() {
+        cont_popup.style.display = "block";
+        cont_popup.classList.add("for-get-pop-up")
+
+        // cont_popup.style.top = `${document.body.clientHeight} - 400px`
+    }
+    function hideContactUsPopup() {
+        cont_popup.style.display = "none";
+    }</script>
 <!-- End Contact-Us Section-->

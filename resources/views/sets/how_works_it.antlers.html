@@ -1,6 +1,6 @@
 <!-- Start How xQ Labs Work Section -->
 <div class="w-full mx-auto bg-purple display-none">
-    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 md:gap-2 lg:gap-12 parent-content">
+    <div class=" relative grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 md:gap-2 lg:gap-12 parent-content">
         <div class="parrent">
             <div class="child-div-1">
                 {{if how_work_imgs}}
@@ -35,12 +35,12 @@
             <p class="how2">{{ how_work_sub_title }}</p>
 
             <div class="how-to-text-content">{{ how_work_description }}</div>
-            {{if how_work_desc_image}}
-            {{ how_work_desc_image }}
-            <img src="{{ url }}" alt="{{ alt }}" class="image-hidden" />
-            {{ /how_work_desc_image }}
-            {{/if}}
         </div>
+        {{if how_work_desc_image}}
+        {{ how_work_desc_image }}
+        <img src="{{ url }}" alt="{{ alt }}" class="image-hidden" />
+        {{ /how_work_desc_image }}
+        {{/if}}
     </div>
 </div>
 <!-- End How xQ Labs Work Section -->

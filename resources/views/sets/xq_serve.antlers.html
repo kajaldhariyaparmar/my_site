@@ -3,17 +3,17 @@
     <div class="promo-child">
         {{services}}
         {{if service_icon != ''}}
+        <div>
             <div>
-                <div>
-                    {{service_icon}}
-                    <img class="promo-icons" src="{{url}}" alt="">
-                    {{/service_icon}}
-                </div>
-                <div class="pr-desc-div">
-                    <p class="pr-nums">{{no_count}}+</p>
-                    <p class="pr-txt">{{serve_title}}</p>
-                </div>
+                {{service_icon}}
+                <img class="promo-icons" src="{{url}}" alt="">
+                {{/service_icon}}
             </div>
+            <div class="pr-desc-div">
+                <p class="pr-nums">{{no_count}}+</p>
+                <p class="pr-txt">{{serve_title}}</p>
+            </div>
+        </div>
         {{/if}}
         {{/services}}
     </div>
@@ -26,14 +26,14 @@
 </div>
 <!-- stats stats/ promo-section 
  big -->
-<article class="btml-float">
+<div class="btml-float relative">
     <div class="btml-float-containt">
         {{services}}
         {{if service_icon != ''}}
         <div class="promo-small-child">
             <div>
                 {{service_icon}}
-                    <img class="promo-icons-sm" src="{{url}}" alt="">
+                <img class="promo-icons-sm" src="{{url}}" alt="">
                 {{/service_icon}}
             </div>
             <div class="pr-desc-div-small">
@@ -47,6 +47,44 @@
 
     <div class="div-lkflt-sm">
         <span>{{side_desc}}</span>
-        <button>Get it Now</button>
-    </div>
-</article>
+        <button onclick="showPopup()">Get it Now</button>
+        
+        </div>
+        
+        </div>
+        <div id="popup" style="display:none;">
+            <span onclick="hidePopup()" class="pop-up-close-btn">&#10005;</span>
+            <div class="pop-up-content-form">
+                <p class="my-heads get-head-title text-center">Where should we email your free guide?</p>
+                <form action="" method="" class=" get-it-form">
+                    <div class="form-row">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName">
+                    </div>
+                    <div class="form-row">
+                        <label for="emailId">Email Address</label>
+                        <input type="email" id="emailId" name="emailId">
+                    </div>
+                    <div class="form-row2">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+            <img class="floating-mail-icon1" src="/assets/maillogo.png" alt="">
+            <img class="floating-mail-icon2" src="/assets/maillogo.png" alt="">
+        </div>
+<script>
+    var popup = document.getElementById("popup");
+    var cont_popup = document.getElementById("cont-popup");
+    function hidePopup() {
+        popup.style.display = "none";
+    }
+    function showPopup() {
+        popup.style.display = "block";
+        popup.classList.add("for-get-pop-up")
+
+        popup.style.top = `${document.body.clientHeight} - 400px`
+    }
+
+
+</script>

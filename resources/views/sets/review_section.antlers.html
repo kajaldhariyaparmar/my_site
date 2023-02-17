@@ -8,7 +8,7 @@
             {{review_video }}
             <div class="ab_vid_par">
                 <video class="rev-vid1" width="100%" height="300px">
-                    <source src="{{url}}" type="video/mp4">
+                    <source src="{{ url }}" type="video/mp4">
                 </video>
                 <button class="play_button_rev1">
                     <img src="/assets/play_button.png" alt="">
@@ -103,24 +103,39 @@
 
 <script>
     $(document).ready(function () {
-        var playButton_rev = document.querySelector(".play_button_rev");
-        var video_rev = document.querySelector(".rev-vid");
-        function play_pausAction_rev() {
-            if (video_rev.paused == true) {
-                // Play the video_rev
-                video_rev.play();
-                // Update the button text to 'Pause'
-                playButton_rev.innerHTML = "";
-            } else {
-                // Pause the video_rev
-                video_rev.pause();
-                // Update the button text to 'Play'
-                playButton_rev.innerHTML = `<img src="/assets/play_button.png" alt="">`;
-            }
-        }
-        // Event listener for the play/pause button
-        video_rev.addEventListener("click", play_pausAction_rev);
-        playButton_rev.addEventListener("click", play_pausAction_rev)
+
+
+        // // Get the video element
+        // var video = $('#rev-vid1')[0];
+
+        // // Get the play/pause button element
+        // var playPauseButton = $('#play_button_rev1');
+
+        // // Set the initial button state
+        // playPauseButton.text('play');
+
+        // // Add a click event listener to the button
+        // playPauseButton.click(function () {
+        //     if (video.paused) {
+        //         video.play();
+        //         playPauseButton.text('Pause');
+        //     } else {
+        //         video.pause();
+        //         playPauseButton.text('Play');
+        //     }
+        // });
+
+
+
+
+
+
+
+
+
+
+
+
         $('.reviews-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -177,12 +192,28 @@
 
 
     });
+                    var playButton_rev = document.querySelector(".play_button_rev");
+                    var video_rev = document.querySelector(".rev-vid");
+                    function play_pausAction_rev() {
+                        if (video_rev.paused == true) {
+                            // Play the video_rev
+                            video_rev.play();
+                            // Update the button text to 'Pause'
+                            playButton_rev.innerHTML = "";
+                        } else {
+                            // Pause the video_rev
+                            video_rev.pause();
+                            // Update the button text to 'Play'
+                            playButton_rev.innerHTML = `<img src="/assets/play_button.png" alt="">`;
+                        }
+                    }
+                    // Event listener for the play/pause button
+                    video_rev.addEventListener("click", play_pausAction_rev);
+                    playButton_rev.addEventListener("click", play_pausAction_rev)
 
 
-
-    var playButton_rev1 = document.querySelector(".play_button_rev1");
-    var video_rev1 = document.querySelector(".rev-vid1");
     function play_pausAction_rev1() {
+        console.log('toggle button')
         if (video_rev1.paused == true) {
             // Play the video_rev
             video_rev1.play();
@@ -198,6 +229,32 @@
         }
     }
     // Event listener for the play/pause button
+
+    var playButton_rev1 = document.querySelector(".play_button_rev1");
+    var video_rev1 = document.querySelector(".rev-vid1");
     video_rev1.addEventListener("click", play_pausAction_rev1);
     playButton_rev1.addEventListener("click", play_pausAction_rev1)
+
+
+
+
+
+
+        // var playPromise = video.play();
+
+        // if (playPromise !== undefined) {
+        //     playPromise.then(_ => {
+        //         // Automatic playback started!
+        //         // Show playing UI.
+        //         // We can now safely pause video...
+        //         video.pause();
+        //     })
+        //         .catch(error => {
+        //             // Auto-play was prevented
+        //             // Show paused UI.
+        //         });
+        // }
+
+
+
 </script>
