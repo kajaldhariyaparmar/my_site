@@ -4,37 +4,21 @@
 <link rel="stylesheet" href="/css/custom.css" type="text/css">
 
 {{ blocks }}
+    {{if type != '' && version != ''}}
+        {{ partial src="sets/{type}/{version}" }}
+    {{else}}
 
-{{if type != '' && version != ''}}
-{{ partial src="sets/{type}/{version}" }}
-{{else}}
+    {{if type == 'navbar'}}
+        {{ partial src="layout/_navigation" }}
+        {{elseif type == 'footer_section'}}
+        {{ partial src="layout/_footer" }}
+    {{ else }}
+        {{ partial src="sets/{type}" }}
 
-{{if type == 'navbar'}}
-{{ partial src="layout/_navigation" }}
-{{elseif type == 'footer_section'}}
-{{ partial src="layout/_footer" }}
-{{ else }}
-{{ partial src="sets/{type}" }}
-<!-- {{if type == 'review_section'}} -->
+    {{ endif }}
 
-<!-- <div class="mx-auto customers-section-small">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 parent-content">
-        <div style="margin-left: -31px">
-            <p class="my-heads text-left sclhead">{{customer_sec_title}}</p>
-        </div> -->
-        <!-- <div class="p-4">
-            <section class="customer-logos-sm slider">
-                {{ customers_img }}
-                <div class="slide12"><img src="{{ url }}" alt="{{ alt }}"></div>
-                {{ /customers_img }}
-            </section>
-        </div> -->
-    <!-- </div>
-</div> -->
-<!-- {{/if}} -->
-{{ endif }}
+    {{/if}}
 
-{{/if}}
 {{ /blocks }}
 <script>
 

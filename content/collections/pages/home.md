@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 49a762b8-3af8-4fac-aea2-ccd3373185c3
-updated_at: 1676479709
+updated_at: 1676613884
 blocks:
   -
     id: le2tryml
@@ -26,6 +26,9 @@ blocks:
       - bannee-img-big-1.png
     type: banner
     enabled: true
+    banner_img_mobile:
+      - banner-img-small-1.png
+      - banner-img-small.png
   -
     id: le2d95d5
     about_us_title: 'What is the xQ Video Lab?'
@@ -187,14 +190,14 @@ blocks:
           id: le44udyk
           values:
             type: video
-            vid_int_video: toistalgia---a-nostalgic-range-of-toys-1676275092.mp4
+            vid_int_video: toistalgia---a-nostalgic-range-of-toys-1676611897.mp4
       -
         type: set
         attrs:
           id: le44xr5o
           values:
             type: video
-            vid_int_video: videoplayback.mp4
+            vid_int_video: videoplayback-1676611905.mp4
       -
         type: paragraph
     type: video_integration
@@ -443,7 +446,7 @@ blocks:
           id: le5bdbxx
           values:
             type: icon_and_count
-            serve_title: 'Registerd Students'
+            serve_title: 'Registered Students'
             no_count: 60000
             service_icon:
               - reg-stud-icon.png
@@ -482,6 +485,7 @@ blocks:
     side_desc: 'Get a **Free Guide** on 10 easy ways to make your school Video savvy'
     type: xq_serve
     enabled: true
+    ebook: ebook_form
   -
     id: le2sveoj
     company_email: info@learnwithxq.com

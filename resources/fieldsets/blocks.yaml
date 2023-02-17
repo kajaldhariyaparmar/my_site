@@ -28,6 +28,22 @@ fields:
           fields:
             -
               import: banner
+            -
+              handle: banner_img_mobile
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                max_files: 10
+                display: 'Banner For Mobile View'
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
         about_us:
           display: 'About us'
           fields:
@@ -886,7 +902,7 @@ fields:
                 visibility: visible
                 always_save: false
         video_integration:
-          display: 'Video Integration'
+          display: 'Project''s Video For Mobile View'
           fields:
             -
               handle: vid_int_title
@@ -1073,6 +1089,17 @@ fields:
                 display: 'Side Description'
                 type: markdown
                 icon: markdown
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: ebook
+              field:
+                max_items: 1
+                display: Ebook
+                type: form
+                icon: form
                 listable: hidden
                 instructions_position: above
                 visibility: visible
