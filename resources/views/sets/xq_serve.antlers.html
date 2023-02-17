@@ -57,40 +57,49 @@
 <div id="popup" style="display:none;">
     <span onclick="hidePopup()" class="pop-up-close-btn">&#10005;</span>
     <div class="pop-up-content-form">
-        <p class="my-heads get-head-title text-center px-6 md:px-4 lg:px-0" id="get-it-heading" style="display: block;">Where should we email your free guide?</p>
-        <div class="get-it-form" id="FormDiv" style="display: block;">
-            {{ form:create in="ebook_form" id="test"}}
-            <div id="success" style="display:none;">
-                <p>Thanks...</p>
-            </div>
-            <div id="failed" style="color:red;"></div>
-            {{ if success }}
-            <div id="success222">
-                <p>Thanks...</p>
-            </div>
-            {{ /if }}
-
-            {{ fields }}
-            <div class="form-field">
-                <div class="form-row">
-                    <label for="fullName">{{ display }}</label>
-                    {{ field }}
-                </div>
-                <p class="text-red-600" id="{{handle}}">{{ error }}</p>
-                {{ if error }}
-                <p class="text-red-600" id="{{handle}}">{{ error }}</p>
-                {{ /if }}
-            </div>
-            {{ /fields }}
-
-            <div class="form-row2">
-                <input type="text" class="hidden " name="{{ honeypot ?? 'honeypot' }}">
-                <button type="submit" class="submit-button">Submit</button>
-            </div>
-            {{ /form:create }}
+        <p class="my-heads get-head-title text-center px-6 md:px-4 lg:px-0" id="get-it-heading" style="display: block;">
+            Where should we email your free guide?</p>
+        <!-- <div > -->
+        {{ form:create in="ebook_form" class="get-it-form" id="FormDiv"}}
+        <div id="success" style="display:none;">
+            <p>Thanks...</p>
         </div>
-        <div id="SuccessDiv" style="display: none;">
-            <p>Helloo</p>
+        <div id="failed" style="color:red; display: none;"></div>
+        {{ if success }}
+        <div id="success222">
+            <p>Thanks...</p>
+        </div>
+        {{ /if }}
+
+        {{ fields }}
+        <div class="form-field">
+            <div class="form-row">
+                <label for="fullName">{{ display }}</label>
+                {{ field }}
+            </div>
+            <p class="text-red-600" id="{{handle}}">{{ error }}</p>
+            {{ if error }}
+            <p class="text-red-600" id="{{handle}}">{{ error }}</p>
+            {{ /if }}
+        </div>
+        {{ /fields }}
+
+        <div class="form-row2">
+            <input type="text" class="hidden " name="{{ honeypot ?? 'honeypot' }}">
+            <button type="submit" class="submit-button">Submit</button>
+        </div>
+        {{ /form:create }}
+        <!-- </div> -->
+        <div id="successDiv" style="display: none;">
+            <p class="my-heads text-center md:text-left">YAY!</p>
+            <p class="my-heads-bk text-center md:text-left py-0 md:pr-48">
+                Your Free guide has been emailed to you.</p>
+            <!-- <p>Helloo</p> -->
+            <div class="relative">
+
+                <img class="letterbox-img" src="/assets/leterboxImg.png" alt="">
+
+            </div>
         </div>
     </div>
     <img class="floating-mail-icon1" src="/assets/maillogo.png" alt="">
@@ -103,32 +112,35 @@
     var popup = document.getElementById("popup");
     var cont_popup = document.getElementById("cont-popup");
     function hidePopup() {
+        document.getElementById("FormDiv").style.display = 'block'
+        document.getElementById("FormDiv").classList.add("get-it-form")
+        document.getElementById('get-it-heading').style.display = 'block'
+        document.getElementById('successDiv').style.display = 'none'
         popup.style.display = "none";
     }
     function showPopup() {
         popup.style.display = "block";
         popup.classList.add("for-get-pop-up")
-
         popup.style.top = `${document.body.clientHeight} - 400px`
     }
-    var form = document.getElementById('test');
-    $("#test").submit(function (event) {
+    var form = document.getElementById('FormDiv');
+    $("#FormDiv").submit(function (event) {
         event.preventDefault()
         var form_data = $(this).serialize();
         console.log(form_data)
         var fd = new FormData();
         $.ajax({
-            url: $("#test").attr('action'),
+            url: $("#FormDiv").attr('action'),
             type: 'POST',
             data: form_data,
         }).done(function (response) {
             console.log(1)
             console.log(response);
-
+            $('#FormDiv').trigger("reset");
             $('#failed').css('display', 'none');
             $('#FormDiv').css('display', 'none')
             $('#get-it-heading').css('display', 'none')
-            $('#SuccessDiv').css('display', 'block')
+            $('#successDiv').css('display', 'flex')
         }).fail(function (data) {
 
             var errors = [data.responseJSON.errors]
@@ -142,7 +154,7 @@
             $('#failed').html(str);
             $('#FormDiv').css('display', 'block')
             $('#get-it-heading').css('display', 'block')
-            $('#SuccessDiv').css('display', 'none')
+            $('#successDiv').css('display', 'none')
         });
     });
 </script>

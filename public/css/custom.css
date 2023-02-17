@@ -1,3 +1,7 @@
+* {
+    font-family: "Cera Pro";
+}
+
 .column {
     float: left;
     padding: 4px;
@@ -688,6 +692,13 @@ input::placeholder {
     font-size: 48px;
     line-height: 57.6px;
     color: blueviolet;
+    font-weight: bold;
+    font-family: "Cera Pro";
+}
+.my-heads-bk {
+    font-size: 48px;
+    line-height: 57.6px;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     font-family: "Cera Pro";
 }
@@ -1483,7 +1494,7 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 40px 100px;
+    padding: 40px 85px;
     gap: 30px;
 }
 
@@ -1494,7 +1505,7 @@ input::placeholder {
 .get-it-form {
     display: flex;
     flex-direction: column;
-    gap: 38px;
+    gap: 20px;
 }
 
 .get-it-form div {
@@ -1559,6 +1570,18 @@ input::placeholder {
     color: #c9b2f9;
     font-weight: 900;
 }
+#successDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* gap: 30px; */
+}
+.letterbox-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 272px;
+}
 
 @media screen and (max-width: 1600px) {
     .vid-btm-sty1 {
@@ -1570,6 +1593,10 @@ input::placeholder {
     }
 
     .my-heads {
+        font-size: 38px;
+        line-height: 47.6px;
+    }
+    .my-heads-bk {
         font-size: 38px;
         line-height: 47.6px;
     }
@@ -1612,6 +1639,15 @@ input::placeholder {
 }
 
 @media screen and (max-width: 768px) {
+    .letterbox-img {
+        position: absolute;
+        top: 51px;
+        right: 0;
+        width: 227px;
+    }
+
+    /*  */
+
     .div-lkflt-sm {
         display: none;
     }
@@ -1787,9 +1823,22 @@ input::placeholder {
     .board-adviser1 .members-image {
         border-radius: 20px;
     }
+    .pop-up-content-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 31px 0px;
+        gap: 30px;
+    }
 }
 
 @media screen and (max-width: 640px) {
+    .letterbox-img {
+        position: absolute;
+        top: 51px;
+        right: 0;
+        width: 186px;
+    }
     .for-get-pop-up {
         display: block;
         position: fixed;
@@ -2444,6 +2493,12 @@ input::placeholder {
     }
 
     .my-heads {
+        font-style: normal;
+        font-weight: 700 !important;
+        font-size: 24px !important;
+        line-height: 29px !important;
+    }
+    .my-heads-bk {
         font-style: normal;
         font-weight: 700 !important;
         font-size: 24px !important;
