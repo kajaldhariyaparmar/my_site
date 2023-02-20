@@ -1,4 +1,4 @@
-.<!--stats/ promo-section  small-->
+<!--stats/ promo-section  small-->
 <div class="mx-auto promo-section">
     <div class="promo-child">
         {{services}}
@@ -22,10 +22,8 @@
         <span>{{side_desc}}</span>
         <button onclick="showPopup()">Get it Now</button>
     </div>
-
 </div>
-<!-- stats stats/ promo-section 
- big -->
+<!-- stats stats/ promo-section big -->
 <div class="btml-float relative">
     <div class="btml-float-containt">
         {{services}}
@@ -48,39 +46,23 @@
     <div class="div-lkflt-sm">
         <span>{{side_desc}}</span>
         <button onclick="showPopup()">Get it Now</button>
-
     </div>
-
 </div>
-
 
 <div id="popup" style="display:none;">
     <span onclick="hidePopup()" class="pop-up-close-btn">&#10005;</span>
     <div class="pop-up-content-form">
         <p class="my-heads get-head-title text-center px-6 md:px-4 lg:px-0" id="get-it-heading" style="display: block;">
             Where should we email your free guide?</p>
-        <!-- <div > -->
+        
         {{ form:create in="ebook_form" class="get-it-form" id="FormDiv"}}
-        <div id="success" style="display:none;">
-            <p>Thanks...</p>
-        </div>
-        <div id="failed" style="color:red; display: none;"></div>
-        {{ if success }}
-        <div id="success222">
-            <p>Thanks...</p>
-        </div>
-        {{ /if }}
-
         {{ fields }}
         <div class="form-field">
             <div class="form-row">
                 <label for="fullName">{{ display }}</label>
                 {{ field }}
             </div>
-            <p class="text-red-600" id="{{handle}}">{{ error }}</p>
-            {{ if error }}
-            <p class="text-red-600" id="{{handle}}">{{ error }}</p>
-            {{ /if }}
+            <p class="text-red-600" id="{{handle}}_err">{{ error }}</p>
         </div>
         {{ /fields }}
 
@@ -89,16 +71,13 @@
             <button type="submit" class="submit-button">Submit</button>
         </div>
         {{ /form:create }}
-        <!-- </div> -->
+        
         <div id="successDiv" style="display: none;">
             <p class="my-heads text-center md:text-left">YAY!</p>
             <p class="my-heads-bk text-center md:text-left py-0 md:pr-48">
                 Your Free guide has been emailed to you.</p>
-            <!-- <p>Helloo</p> -->
             <div class="relative">
-
                 <img class="letterbox-img" src="/assets/leterboxImg.png" alt="">
-
             </div>
         </div>
     </div>
@@ -107,6 +86,12 @@
 </div>
 </div>
 <script>
+    let get_it_fields = new Array();
+    let get_it_form = $("#FormDiv").serializeArray();
+
+    $.each(get_it_form, function(i, value) {
+        get_it_fields.push(value.name)
+    });
 
     var form = document.getElementById('form');
     var popup = document.getElementById("popup");
@@ -122,20 +107,21 @@
         popup.style.display = "block";
         popup.classList.add("for-get-pop-up")
         popup.style.top = `${document.body.clientHeight} - 400px`
+        get_it_fields.forEach(function(name){
+            $('#'+name+'_err').html('');
+        })
     }
     var form = document.getElementById('FormDiv');
-    $("#FormDiv").submit(function (event) {
+    $(".get-it-form").submit(function (event) {
         event.preventDefault()
         var form_data = $(this).serialize();
-        console.log(form_data)
+        
         var fd = new FormData();
         $.ajax({
             url: $("#FormDiv").attr('action'),
             type: 'POST',
             data: form_data,
         }).done(function (response) {
-            console.log(1)
-            console.log(response);
             $('#FormDiv').trigger("reset");
             $('#failed').css('display', 'none');
             $('#FormDiv').css('display', 'none')
@@ -143,15 +129,29 @@
             $('#successDiv').css('display', 'flex')
         }).fail(function (data) {
 
-            var errors = [data.responseJSON.errors]
+            /* var errors = [data.responseJSON.errors]
             var str = ""
 
-            errors.forEach(function (error) {
+           errors.forEach(function (error) {
                 console.log(error);
                 str += error
-            })
-            str = str.replace(/\,/g, "<br>")
-            $('#failed').html(str);
+            }) 
+            str = str.replace(/\,/g, "<br>") 
+            $('#failed').html(str); */
+            var error = [data.responseJSON.error]
+            $.each(error, function(key, value) {
+                $.each(value, function(index, value1){
+                    console.log(index)  
+                    console.log(value1)
+                    if ($.inArray(index,get_it_fields) >= 0) {
+                       $('#'+index+'_err').html(value1);
+                    } else {
+                        console.log(11)
+                        $('#'+index+'_err').html('');
+                    }
+                });
+            });
+            
             $('#FormDiv').css('display', 'block')
             $('#get-it-heading').css('display', 'block')
             $('#successDiv').css('display', 'none')

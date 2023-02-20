@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 49a762b8-3af8-4fac-aea2-ccd3373185c3
-updated_at: 1676613884
+updated_at: 1676869520
 blocks:
   -
     id: le2tryml
@@ -106,8 +106,7 @@ blocks:
     review_title: 'Not just for aspiring filmmakers.'
     review_sub_title: 'Video-Making is a must-learn skill for everyone.'
     review_desc: 'We exist in an age where videos are rapidly becoming the preferred means of communication. Which means, video-making is no longer a hobby or a vocational subject meant for a few. Rather, it’s a non-negotiable skill for every child to able to communicate their ideas effectively in the 21st century.'
-    review_video:
-      - toistalgia---a-nostalgic-range-of-toys.mp4
+    review_video: videoplayback-1676869509.mp4
     review_video_desc: 'Watch what leading educators have to say about video-making'
     type: review_section
     enabled: true

@@ -319,6 +319,7 @@ fields:
                 instructions_position: above
                 visibility: visible
                 always_save: false
+                max_files: 1
             -
               handle: review_video_desc
               field:

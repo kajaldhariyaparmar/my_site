@@ -66,7 +66,6 @@ function showContactUsPopup() {
     cont_popup.style.display = "block";
     cont_popup.classList.add("for-get-pop-up")
     $('#contact_us').trigger("reset");
-    console.log(fields)
     fields.forEach(function(name){
         $('#'+name+'_error').html('');
     })
@@ -90,7 +89,7 @@ $("#contact_us").submit(function( event ) {
             $('#contact_us').trigger("reset");
         }).fail(function(data) {
             
-            var errors = [data.responseJSON.errors]
+            //var errors = [data.responseJSON.errors]
             var error = [data.responseJSON.error]
             $.each(error, function(key, value) {
                 $.each(value, function(index, value1){
