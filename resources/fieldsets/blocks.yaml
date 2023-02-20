@@ -6,7 +6,7 @@ fields:
       collapse: accordion
       sets:
         navbar:
-          display: Navbar
+          display: 'Navbar (Mobile + Web)'
           fields:
             -
               handle: navbar_logo
@@ -24,7 +24,7 @@ fields:
                 visibility: visible
                 always_save: false
         banner:
-          display: Banner
+          display: 'Banner (Mobile + Web)'
           fields:
             -
               import: banner
@@ -45,7 +45,7 @@ fields:
                 visibility: visible
                 always_save: false
         about_us:
-          display: 'About us'
+          display: 'About us (Mobile + Web)'
           fields:
             -
               handle: about_us_title
@@ -105,7 +105,7 @@ fields:
                 visibility: visible
                 always_save: false
         how_works_it:
-          display: 'How Works It'
+          display: 'How Works It (Web)'
           fields:
             -
               handle: how_work_main_title
@@ -231,7 +231,7 @@ fields:
                 visibility: visible
                 always_save: false
         customers:
-          display: Customers
+          display: 'Customers (Mobile + Web)'
           fields:
             -
               handle: customer_sec_title
@@ -262,7 +262,7 @@ fields:
                 visibility: visible
                 always_save: false
         review_section:
-          display: 'Review Section'
+          display: 'Review Section (Mobile + Web)'
           fields:
             -
               handle: review_title
@@ -376,7 +376,7 @@ fields:
                 visibility: visible
                 always_save: false
         features_students:
-          display: 'Features Students'
+          display: 'Features Students (Mobile + Web)'
           fields:
             -
               handle: fea_stu_main_title
@@ -463,7 +463,7 @@ fields:
                 visibility: visible
                 always_save: false
         news_section:
-          display: 'News Section'
+          display: 'News Section (Mobile + Web)'
           fields:
             -
               handle: news_sec_title
@@ -493,7 +493,7 @@ fields:
                 visibility: visible
                 always_save: false
         features_school:
-          display: 'Features School'
+          display: 'Features School (Mobile + Web)'
           fields:
             -
               handle: fea_school_main_title
@@ -622,7 +622,7 @@ fields:
                 visibility: visible
                 always_save: false
         contact_us:
-          display: 'Contact Us'
+          display: 'Contact Us (Mobile + Web)'
           fields:
             -
               handle: contact_us_main_title
@@ -663,17 +663,17 @@ fields:
                 visibility: visible
                 always_save: false
         founder_team:
-          display: 'Founder Team'
+          display: 'Founder Team (Mobile + Web)'
           fields:
             -
               import: team_profile
         board_of_advisor:
-          display: 'Board Of  Advisor'
+          display: 'Board Of  Advisor (Mobile + Web)'
           fields:
             -
               import: team_profile
         about_xq:
-          display: 'About Xq'
+          display: 'About Xq (Mobile + Web)'
           fields:
             -
               handle: about_xq_main_title
@@ -781,7 +781,7 @@ fields:
                 visibility: visible
                 always_save: false
         footer_section:
-          display: 'Footer Section'
+          display: 'Footer Section (Mobile + Web)'
           fields:
             -
               handle: company_email
@@ -903,7 +903,7 @@ fields:
                 visibility: visible
                 always_save: false
         video_integration:
-          display: 'Project''s Video For Mobile View'
+          display: 'Project''s Video (Mobile)'
           fields:
             -
               handle: vid_int_title
@@ -998,7 +998,7 @@ fields:
                 visibility: visible
                 always_save: false
         xq_serve:
-          display: 'xQ Serve'
+          display: 'xQ Serve (Mobile + Web)'
           fields:
             -
               handle: services
