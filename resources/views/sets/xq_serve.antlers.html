@@ -54,7 +54,7 @@
     <div class="pop-up-content-form">
         <p class="my-heads get-head-title text-center px-6 md:px-4 lg:px-0" id="get-it-heading" style="display: block;">
             Where should we email your free guide?</p>
-        
+
         {{ form:create in="ebook_form" class="get-it-form" id="FormDiv"}}
         {{ fields }}
         <div class="form-field">
@@ -89,7 +89,7 @@
     let get_it_fields = new Array();
     let get_it_form = $("#FormDiv").serializeArray();
 
-    $.each(get_it_form, function(i, value) {
+    $.each(get_it_form, function (i, value) {
         get_it_fields.push(value.name)
     });
 
@@ -107,15 +107,15 @@
         popup.style.display = "block";
         popup.classList.add("for-get-pop-up")
         popup.style.top = `${document.body.clientHeight} - 400px`
-        get_it_fields.forEach(function(name){
-            $('#'+name+'_err').html('');
+        get_it_fields.forEach(function (name) {
+            $('#' + name + '_err').html('');
         })
     }
     var form = document.getElementById('FormDiv');
     $(".get-it-form").submit(function (event) {
         event.preventDefault()
         var form_data = $(this).serialize();
-        
+
         var fd = new FormData();
         $.ajax({
             url: $("#FormDiv").attr('action'),
@@ -139,19 +139,19 @@
             str = str.replace(/\,/g, "<br>") 
             $('#failed').html(str); */
             var error = [data.responseJSON.error]
-            $.each(error, function(key, value) {
-                $.each(value, function(index, value1){
-                    console.log(index)  
+            $.each(error, function (key, value) {
+                $.each(value, function (index, value1) {
+                    console.log(index)
                     console.log(value1)
-                    if ($.inArray(index,get_it_fields) >= 0) {
-                       $('#'+index+'_err').html(value1);
+                    if ($.inArray(index, get_it_fields) >= 0) {
+                        $('#' + index + '_err').html(value1);
                     } else {
                         console.log(11)
-                        $('#'+index+'_err').html('');
+                        $('#' + index + '_err').html('');
                     }
                 });
             });
-            
+
             $('#FormDiv').css('display', 'block')
             $('#get-it-heading').css('display', 'block')
             $('#successDivG').css('display', 'none')

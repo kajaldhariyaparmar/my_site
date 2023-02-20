@@ -24,20 +24,22 @@
                 {{ success }}
                 {{ else }}
 
-                {{ if errors }}
+                <!-- {{ if errors }}
                 <div class="bg-red-300 text-white p-2">
                     {{ errors }}
                     {{ value }}<br>
                     {{ /errors }}
                 </div>
-                {{ /if }}
+                {{ /if }} -->
 
                 {{ fields }}
                 <div class="form-field">
                     <label>{{ display }}</label>
-                    {{ field }}
-                    <br>
-                    <p class="text-red-600" id="{{handle}}_error">{{ error }}</p>
+                    <div class="err_sup_div">
+                        {{ field }}
+
+                        <p class="text-red-600" id="{{handle}}_error">{{ error }}</p>
+                    </div>
                 </div>
                 {{ /fields }}
                 <div class="submit-btn-supp">
@@ -104,8 +106,8 @@
             $('#failed').css('display', 'none');
             showContactUsPopup()
             $('#contact_us').trigger("reset");
-        }).fail(function(data) {
-            
+        }).fail(function (data) {
+
             //var errors = [data.responseJSON.errors]
             var error = [data.responseJSON.error]
             $.each(error, function (key, value) {

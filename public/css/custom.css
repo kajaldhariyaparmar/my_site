@@ -444,10 +444,15 @@ input::placeholder {
     align-items: end;
     justify-content: end;
     align-content: end;
-    padding: 14px 49px;
+    padding: 14px ;
     /* justify-content: center; */
 }
+.err_sup_div{
 
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
 .submit-button {
     background-color: #ff0066 !important;
     font-family: "Cera Pro";
@@ -1413,6 +1418,11 @@ html {
 }
 
 /* footer nsmall  ---------------------*/
+.div-lkflt > span  strong {
+    color: #feed00;
+}
+
+/* footer nsmall  ---------------------*/
 
 .footer-section-small-par {
     display: none;
@@ -1568,9 +1578,9 @@ html {
 
 .floating-mail-icon3 {
     position: relative;
-    top: 82px;
-    left: -26px;
-    width: 50px;
+    top: -135px;
+    left: -19px;
+    width: 37px;
 }
 
 .floating-mail-icon2 {
@@ -1624,7 +1634,7 @@ html {
     padding-right: 30px;
 }
 .cont-sup {
-    padding: 20px 60px;
+    padding: 20px 20px;
 }
 #successDiv .letterbox-img {
     position: absolute;
@@ -1921,7 +1931,7 @@ html {
     }
     .letterbox-img {
         position: absolute;
-        top: 51px;
+        top: 126px;
         right: 0;
         width: 186px;
     }
@@ -1932,7 +1942,7 @@ html {
         z-index: 10;
         background: #ffffff;
         width: 80%;
-        height: 365px;
+        height: 441px;
         border: 1px solid #793ef0;
         box-shadow: 1px 3px 0px 2px #793ef0;
         border-radius: 20px;
@@ -2135,8 +2145,8 @@ html {
     .promo-child {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 50px 30px;
+        gap: 17px;
+        padding: 50px 25px;
     }
 
     .promo-child > div {
@@ -2175,7 +2185,7 @@ html {
         background: #ff0066;
         border-radius: 10px;
         position: relative;
-        bottom: 5px;
+        bottom: -28px;
         display: flex;
         gap: 25px;
         flex-direction: column;
