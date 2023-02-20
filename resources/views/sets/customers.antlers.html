@@ -1,12 +1,19 @@
-
 <!-- Start Our Customers Section big -->
 <div class="w-full mx-auto customers-section-big">
-    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 parent-content">
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 " style="
+    padding: 20px 111px;
+    text-align: center;
+">
         <div class="p-4">
             <h2 class="my-heads text-left">{{customer_sec_title}}</h2>
         </div>
-        <div class="p-4">
-            <section class="customer-logos slider">
+        <div class="p-4" style="
+        display: flex;
+        align-items: center;
+        text-align: center;
+        vertical-align: middle;
+    ">
+            <section class="customer-logos slider" style=" width: 85%">
                 {{ customers_img }}
                 <div class="slide"><img src="{{ url }}" alt="{{ alt }}"></div>
                 {{ /customers_img }}
@@ -20,7 +27,7 @@
     $(document).ready(function () {
 
         $('.customer-logos').slick({
-            slidesToShow: 4,
+            slidesToShow: 3,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 1500,
