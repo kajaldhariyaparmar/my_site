@@ -551,10 +551,17 @@ input::placeholder {
     width: 100%;
     font-size: 18px;
 }
-
+html {
+    margin: auto;
+    /* max-width: 1920px; */
+}
 .card button:hover {
     opacity: 0.7;
 }
+/* .news-img-sup{
+    height: 80px !important;
+    width: 150px !important;
+} */
 
 .news-logo-img {
     height: 80px !important;
@@ -912,7 +919,10 @@ input::placeholder {
     align-items: center;
     justify-content: center;
 }
-
+.about-xq-img img {
+    height: 65px;
+    width: 65px;
+}
 .about-xq-text {
     margin-left: 10px;
 }
@@ -1160,6 +1170,7 @@ input::placeholder {
 
 .vid-help-small div {
     width: 50%;
+    height: 40vw;
 }
 
 .help-md-field {
@@ -1167,12 +1178,18 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     align-content: center;
-    text-align: left;
+    vertical-align: middle;
     background-color: #ffed00;
-    padding: 25px;
     box-sizing: border-box;
 }
-
+.help-md-field p {
+    padding: 1rem;
+    margin: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
 .banerimage {
     /* width: 100% !important;
     height: 350px !important; */
@@ -1346,8 +1363,8 @@ input::placeholder {
 }
 
 .promo-icons-sm {
-    height: 47px;
-    width: 47px;
+    height: 100%;
+    width: 100%;
 }
 
 .div-lkflt-sm {
@@ -1412,7 +1429,9 @@ input::placeholder {
     align-content: center;
     align-items: center;
 }
-
+.vid-int-slider .slide-arrow {
+    top: 35%;
+}
 .play_button img {
     height: 50px;
 }
@@ -1613,6 +1632,16 @@ input::placeholder {
     right: 0;
     width: 284px;
 }
+.banner_section_lg {
+    display: block;
+}
+.banner_section_sm {
+    display: none;
+}
+.promo-icon-par {
+    height: 30px;
+    width: 30px;
+}
 @media screen and (max-width: 1600px) {
     .vid-btm-sty1 {
         font-size: 11px;
@@ -1759,7 +1788,7 @@ input::placeholder {
 
     .customer-logos {
         margin-right: 28px;
-        margin-left: 20px;
+        margin-left: 28px;
     }
 
     .logo {
@@ -1767,8 +1796,8 @@ input::placeholder {
     }
 
     .news-logos {
-        margin-right: 34px;
-        margin-left: 20px;
+        margin-right: 7px;
+        margin-left: 7;
     }
 
     .image-hidden {
@@ -1880,6 +1909,16 @@ input::placeholder {
 }
 
 @media screen and (max-width: 640px) {
+    .about-xq-img img {
+        height: 45px;
+        width: 45px;
+    }
+    .banner_section_lg {
+        display: none;
+    }
+    .banner_section_sm {
+        display: block;
+    }
     .letterbox-img {
         position: absolute;
         top: 51px;
@@ -2071,11 +2110,13 @@ input::placeholder {
         align-items: center;
         justify-content: center;
     }
-
+    .news-logos .slick-slide {
+        margin: 0 6px;
+    }
     .news-logo-img {
-        height: 50px !important;
-        width: 120px !important;
-        object-fit: fill;
+        height: 45px !important;
+        width: 82px !important;
+        object-fit: cover;
         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
             rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
         border-radius: 12px;
@@ -2095,7 +2136,7 @@ input::placeholder {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        padding: 50px 37px;
+        padding: 50px 30px;
     }
 
     .promo-child > div {
@@ -2104,11 +2145,11 @@ input::placeholder {
     }
 
     .pr-desc-div .pr-nums {
+        margin-top: -10px;
         font-family: "Cera Pro";
         font-style: normal;
         font-weight: 700;
-        font-size: 36px;
-        line-height: 43px;
+        font-size: 1.5rem;
         color: #793ef0;
     }
 
@@ -2116,21 +2157,21 @@ input::placeholder {
         font-family: "Cera Pro";
         font-style: normal;
         font-weight: 400;
-        font-size: 10px;
+        font-size: 9px;
         line-height: 14px;
         text-align: center;
         color: #000000;
     }
 
     .promo-icons {
-        height: 45px;
-        width: 45px;
+  height: 100%;
+  width: 100%;
     }
 
     .div-lkflt {
         margin: auto;
         /* height: 250px; */
-        width: 54%;
+        width: 55%;
         background: #ff0066;
         border-radius: 10px;
         position: relative;
@@ -2218,7 +2259,7 @@ input::placeholder {
 
     .members-image {
         width: 100%;
-        height: 177px;
+        /* height: 177px; */
         object-fit: cover;
         border-radius: 20px;
     }
@@ -2253,6 +2294,13 @@ input::placeholder {
     }
 
     .board-adviser .next-arrow {
+        top: 94px;
+    }
+    .board-adviser1 .prev-arrow {
+        top: 94px;
+    }
+
+    .board-adviser1 .next-arrow {
         top: 94px;
     }
 
@@ -2350,7 +2398,7 @@ input::placeholder {
         font-style: normal;
         font-weight: 700;
         font-size: 24px !important;
-        line-height: 29px;
+        line-height: 29px !important;
         font-family: "Cera Pro";
     }
 
@@ -2361,7 +2409,7 @@ input::placeholder {
         font-weight: 700;
         font-size: 24px !important;
         font-style: normal;
-        line-height: 29px;
+        line-height: 29px !important;
         margin-bottom: 10px;
         font-family: "Cera Pro";
     }
@@ -2420,11 +2468,8 @@ input::placeholder {
     }
 
     .reviews-slider-sm .slide-arrow {
-        right: -10px;
-        width: 0;
-        left: 290px;
-        height: 0;
-        top: 89px;
+        margin-top: 32px;
+        margin-right: 18px;
     }
 
     .forqutes {
@@ -2467,6 +2512,17 @@ input::placeholder {
         margin-left: 35px !important;
     }
 
+    .vid-help-small-imgdiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .vid-help-small-imgdiv img {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
     .vid-btm-flmkr {
         height: 25px;
         font-style: normal;
@@ -2493,7 +2549,7 @@ input::placeholder {
         color: white;
         background-color: #ff0066;
         margin-top: 30px;
-        border-radius: 20px;
+        border-radius: 10px;
     }
 
     .display-none {
@@ -2645,7 +2701,7 @@ input::placeholder {
         display: block;
         margin: 30px auto;
         /* border: 2px solid red; */
-        padding: 40px 30px;
+        padding: 40px 30px 0px 30px;
     }
 
     .vid_int_description {
@@ -2676,18 +2732,23 @@ input::placeholder {
         background-color: #d9d9d9;
     }
 
-    .nep-img IMG {
+    .nep-img img {
         width: 100%;
-        height: 196px;
+        /* height: 196px; */
+        height: 115%;
         object-fit: cover;
     }
 
-    .nep-img + p {
+    .school_feature_subtitle,
+    .school_feature_subtitle + p,
+    .school_feature_subtitle p {
         font-family: "Cera Pro";
         font-style: normal;
         font-weight: 400;
         font-size: 12px;
         line-height: 14px;
+        text-align: center;
+        padding-top: 7%;
 
         /* padding: 0 30px; */
     }
@@ -2721,5 +2782,10 @@ input::placeholder {
         font-size: 13px;
         font-weight: 700;
         margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .help-md-field p {
+        font-size: 0.7rem;
     }
 }
