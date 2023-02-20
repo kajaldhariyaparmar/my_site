@@ -1570,7 +1570,13 @@ input::placeholder {
     color: #c9b2f9;
     font-weight: 900;
 }
-#successDiv {
+#successDivG {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* gap: 30px; */
+}
+.successDiv {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1582,7 +1588,31 @@ input::placeholder {
     right: 0;
     width: 272px;
 }
-
+.my-heads-popup {
+    font-size: 48px;
+    line-height: 57.6px;
+    color: blueviolet;
+    font-weight: bold;
+    font-family: "Cera Pro";
+    padding-right: 30px;
+}
+.my-heads-popup + p {
+    font-size: 48px;
+    line-height: 57.6px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: "Cera Pro";
+    padding-right: 30px;
+}
+.cont-sup {
+    padding: 20px 60px;
+}
+#successDiv .letterbox-img {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 284px;
+}
 @media screen and (max-width: 1600px) {
     .vid-btm-sty1 {
         font-size: 11px;
@@ -1639,6 +1669,23 @@ input::placeholder {
 }
 
 @media screen and (max-width: 768px) {
+    .my-heads-popup {
+        font-size: 32px;
+        line-height: 57.6px;
+        color: blueviolet;
+        font-weight: bold;
+        font-family: "Cera Pro";
+        padding-right: 30px;
+    }
+    .my-heads-popup + p {
+        font-size: 32px;
+        line-height: 57.6px;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-family: "Cera Pro";
+        padding-right: 30px;
+    }
+
     .letterbox-img {
         position: absolute;
         top: 51px;

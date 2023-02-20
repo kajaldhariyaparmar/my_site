@@ -71,8 +71,8 @@
             <button type="submit" class="submit-button">Submit</button>
         </div>
         {{ /form:create }}
-        
-        <div id="successDiv" style="display: none;">
+        <!-- </div> -->
+        <div id="successDivG" style="display: none;">
             <p class="my-heads text-center md:text-left">YAY!</p>
             <p class="my-heads-bk text-center md:text-left py-0 md:pr-48">
                 Your Free guide has been emailed to you.</p>
@@ -84,7 +84,7 @@
     <img class="floating-mail-icon1" src="/assets/maillogo.png" alt="">
     <img class="floating-mail-icon2" src="/assets/maillogo.png" alt="">
 </div>
-</div>
+
 <script>
     let get_it_fields = new Array();
     let get_it_form = $("#FormDiv").serializeArray();
@@ -100,7 +100,7 @@
         document.getElementById("FormDiv").style.display = 'block'
         document.getElementById("FormDiv").classList.add("get-it-form")
         document.getElementById('get-it-heading').style.display = 'block'
-        document.getElementById('successDiv').style.display = 'none'
+        document.getElementById('successDivG').style.display = 'none'
         popup.style.display = "none";
     }
     function showPopup() {
@@ -126,7 +126,7 @@
             $('#failed').css('display', 'none');
             $('#FormDiv').css('display', 'none')
             $('#get-it-heading').css('display', 'none')
-            $('#successDiv').css('display', 'flex')
+            $('#successDivG').css('display', 'flex')
         }).fail(function (data) {
 
             /* var errors = [data.responseJSON.errors]
@@ -154,7 +154,7 @@
             
             $('#FormDiv').css('display', 'block')
             $('#get-it-heading').css('display', 'block')
-            $('#successDiv').css('display', 'none')
+            $('#successDivG').css('display', 'none')
         });
     });
 </script>

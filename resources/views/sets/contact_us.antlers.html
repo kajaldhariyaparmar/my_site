@@ -36,6 +36,7 @@
                 <div class="form-field">
                     <label>{{ display }}</label>
                     {{ field }}
+                    <br>
                     <p class="text-red-600" id="{{handle}}_error">{{ error }}</p>
                 </div>
                 {{ /fields }}
@@ -52,58 +53,74 @@
 <!-- <button onclick="showContactUsPopup()">Get it Now2</button> -->
 <div id="cont-popup" style="display: none;">
     <span onclick="hideContactUsPopup()" class="pop-up-close-btn ">&#10005;</span>
+    <div class="cont-sup">
+
+        <div id="successDiv">
+            <p class="my-heads-popup text-center md:text-left">YAY!</p>
+            <p class="my-heads-bk text-center md:text-left">
+                Your Free guide has been emailed to you.</p>
+
+            <div class="relative">
+
+                <img class="letterbox-img" src="/assets/leterboxImg.png" alt="">
+
+            </div>
+        </div>
+    </div>
+
     <img class="floating-mail-icon3" src="/assets/maillogo.png" alt="">
 </div>
-<script>  
-let fields = new Array();
+<script>
+    let fields = new Array();
 
-let x = $("#contact_us").serializeArray();
-$.each(x, function(i, field) {
-    fields.push(field.name)
-});
-     
-function showContactUsPopup() {
-    cont_popup.style.display = "block";
-    cont_popup.classList.add("for-get-pop-up")
-    $('#contact_us').trigger("reset");
-    fields.forEach(function(name){
-        $('#'+name+'_error').html('');
-    })
-    // cont_popup.style.top = `${document.body.clientHeight} - 400px`
-}
-function hideContactUsPopup() {
-    cont_popup.style.display = "none";
-}
+    let x = $("#contact_us").serializeArray();
+    $.each(x, function (i, field) {
+        fields.push(field.name)
+    });
 
-$("#contact_us").submit(function( event ) {
+    function showContactUsPopup() {
+        cont_popup.style.display = "block";
+        cont_popup.classList.add("for-get-pop-up")
+        $('#contact_us').trigger("reset");
+        console.log(fields)
+        fields.forEach(function (name) {
+            $('#' + name + '_error').html('');
+        })
+        // cont_popup.style.top = `${document.body.clientHeight} - 400px`
+    }
+    function hideContactUsPopup() {
+        cont_popup.style.display = "none";
+    }
+
+    $("#contact_us").submit(function (event) {
         event.preventDefault()
         var form_data = $(this).serialize();
-        
+
         $.ajax({
             url: $("#contact_us").attr('action'),
             type: 'POST',
             data: form_data,
-         }).done(function(response) {
-            $('#failed').css('display','none');
+        }).done(function (response) {
+            $('#failed').css('display', 'none');
             showContactUsPopup()
             $('#contact_us').trigger("reset");
         }).fail(function(data) {
             
             //var errors = [data.responseJSON.errors]
             var error = [data.responseJSON.error]
-            $.each(error, function(key, value) {
-                $.each(value, function(index, value1){
-                    console.log(index)  
+            $.each(error, function (key, value) {
+                $.each(value, function (index, value1) {
+                    console.log(index)
                     console.log(value1)
-                    if ($.inArray(index,fields) >= 0) {
-                       $('#'+index+'_error').html(value1);
+                    if ($.inArray(index, fields) >= 0) {
+                        $('#' + index + '_error').html(value1);
                     } else {
                         console.log(11)
-                        $('#'+index+'_error').html('');
+                        $('#' + index + '_error').html('');
                     }
                 });
             });
-            hideContactUsPopup() 
+            hideContactUsPopup()
         });
     });
 </script>
