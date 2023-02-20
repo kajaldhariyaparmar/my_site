@@ -1079,11 +1079,11 @@ html {
 /* -------------- */
 
 .customers-section-small {
-    display: block;
+    display: none !important;
 }
 
 .customers-section-big {
-    display: block;
+    display: block !important;
 }
 
 .slider-content {
@@ -2507,6 +2507,9 @@ html {
 
     .customers-section-small {
         display: block !important;
+    }
+    .customers-section-big {
+        display: none !important;
     }
 
     .students-Section-small {
