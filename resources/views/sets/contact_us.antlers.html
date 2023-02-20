@@ -104,9 +104,9 @@
             $('#failed').css('display', 'none');
             showContactUsPopup()
             $('#contact_us').trigger("reset");
-        }).fail(function (data) {
-
-            var errors = [data.responseJSON.errors]
+        }).fail(function(data) {
+            
+            //var errors = [data.responseJSON.errors]
             var error = [data.responseJSON.error]
             $.each(error, function (key, value) {
                 $.each(value, function (index, value1) {

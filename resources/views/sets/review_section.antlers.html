@@ -56,22 +56,21 @@
             <p class="white242">{{ review_sub_title }}</p>
             <div class="filmaker_description">{{ review_desc }}</div>
         </div>
-        <div class="p-4 ">
-            {{review_video }}
+        <div class="p-4">
+            {{if review_video }}
             <div class="ab_vid_par">
                 <video class="rev-vid" width="100%" height="300px">
-                    <source src="{{url}}" type="video/mp4">
+                    <source src="{{review_video}}" type="video/mp4">
                 </video>
                 <button class="play_button_rev">
                     <img src="/assets/play_button.png" alt="">
                 </button>
             </div>
-            {{/review_video}}
+            {{/if}}
             <div class="vid-btm-flmkr">{{review_video_desc}}</div>
         </div>
-
     </div>
-    <div class="whtfloatsec-s ">
+    <div class="whtfloatsec-s">
         <!-- <p>Video-creation engages a child’s
             intelligence in multiple ways. And helps learning academic concepts in a much
             more immersive and holistic way.</p>

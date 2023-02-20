@@ -411,7 +411,7 @@ h2 {
 
 .form-field input,
 textarea {
-    width: 70%;
+    /*width: 70%;*/
     padding: 8px;
     margin-bottom: 5px;
     border-radius: 5px;
