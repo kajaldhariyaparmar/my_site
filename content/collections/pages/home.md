@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 49a762b8-3af8-4fac-aea2-ccd3373185c3
-updated_at: 1676869520
+updated_at: 1676894762
 blocks:
   -
     id: le2tryml
@@ -446,7 +446,7 @@ blocks:
           values:
             type: icon_and_count
             serve_title: 'Registered Students'
-            no_count: 60000
+            no_count: 6000
             service_icon:
               - reg-stud-icon.png
       -
