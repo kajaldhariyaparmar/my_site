@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 49a762b8-3af8-4fac-aea2-ccd3373185c3
-updated_at: 1676894762
+updated_at: 1676960343
 blocks:
   -
     id: le2tryml
@@ -296,7 +296,7 @@ blocks:
           values:
             type: image_and_text
             logo:
-              - component_37-1676286601.png
+              - component_40.png
             logo_text: |-
               Designed By
               Academicains &
