@@ -1532,6 +1532,14 @@ html {
     font-family: "Cera Pro";
     padding-right: 30px;
 }
+.contact-popup-head{
+    font-size: 5rem;
+    line-height: 57.6px;
+    color: blueviolet;
+    font-weight: bold;
+    font-family: "Cera Pro";
+   
+}
 .my-heads-popup + p {
     font-size: 48px;
     line-height: 57.6px;
@@ -1542,6 +1550,20 @@ html {
 }
 .cont-sup {
     padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem
+}
+.thanks-black {
+    font-size: 1.5rem ;
+    color: rgb(0, 0, 0) ;
+    line-height: 32.6px ;
+    font-weight: 400 ;
+}
+.tnks-img{
+    width: 25%;
 }
 #successDiv .letterbox-img {
     position: absolute;
@@ -1821,6 +1843,44 @@ html {
 }
 
 @media screen and (max-width: 640px) {
+    .pop-up-close-btn {
+        position: absolute;
+        float: right;
+        cursor: pointer;
+        border-radius: 50%;
+        padding: 0px 5px;
+        border: 3px solid #c9b2f9;
+        color: #c9b2f9;
+        right: 20px;
+        font-weight: 700;
+    }
+    .tnks-img {
+        width: 30%;
+    }
+    .cont-sup {
+        padding: 25px 10px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+    }
+    div#cont-popup {
+        height: auto;
+    }
+    .contact-popup-head {
+        font-size: 2.8rem;
+        color: blueviolet;
+        font-weight: bold;
+        font-family: "Cera Pro";
+    }
+    .thanks-black {
+        font-size: .9rem;
+        color: rgb(0, 0, 0) ;
+        line-height: 20.6px;
+        text-align: center;
+        font-weight: 400 ;
+    }
     .about-xq-img img {
         height: 45px;
         width: 45px;
