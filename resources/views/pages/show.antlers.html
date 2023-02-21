@@ -27,7 +27,18 @@
 
 {{ /blocks }}
 <script>
-
+const couriusbtn = document.querySelector(".about-btn").addEventListener("click", onLinkClick)
+const couriusbtn1 = document.querySelector(".about-btn1").addEventListener("click", onLinkClick1)
+function onLinkClick() {
+    // console.log("fhfghhhghgfhgfhgfhfg")
+  document.querySelector('.contactus-subtitle').scrollIntoView();
+  // will scroll to 4th h3 element
+}
+function onLinkClick1() {
+    // console.log("fhfghhhghgfhgfhgfhfg")
+  document.querySelector('.contactus-subtitle').scrollIntoView();
+  // will scroll to 4th h3 element
+}
     $(document).ready(function () {
 
         $('.customer-logos-sm').slick({
