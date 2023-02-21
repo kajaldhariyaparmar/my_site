@@ -45,8 +45,6 @@ sections:
           instructions_position: above
           visibility: visible
           always_save: false
-          validate:
-            - required
       -
         handle: city
         field:
@@ -59,5 +57,3 @@ sections:
           instructions_position: above
           visibility: visible
           always_save: false
-          validate:
-            - required
