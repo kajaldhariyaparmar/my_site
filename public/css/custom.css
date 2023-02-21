@@ -767,8 +767,8 @@ html {
     display: none;
 }
 
-.reviews-slider .prev-arrow {
-    left: 0;
+.reviews-sliderst .prev-arrow {
+    left: -9px;
     width: 0;
     height: 0;
 }
@@ -1407,8 +1407,9 @@ html {
     transform: translate(-50%, -50%);
 }
 
-.reviews-slider .slide-arrow {
-    position: absolute;
+.reviews-sliderst .slide-arrow {
+    /* position: absolute; */
+
     margin-top: -9px;
     margin-right: 47px;
 }

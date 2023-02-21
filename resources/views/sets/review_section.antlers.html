@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="whtfloatsec">
-        <div class="reviews-slider slider">
+        <div class="reviews-sliderst slider">
             {{reviews}}
             {{if description != ''}}
             <div>
@@ -101,7 +101,7 @@
 
 <script>
     $(document).ready(function () {
-        $('.reviews-slider').slick({
+        $('.reviews-sliderst').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: false,
@@ -154,7 +154,7 @@
             }]
         });
     });
-    
+
     function play_pausAction_rev() {
         if (video_rev.paused == true) {
             // Play the video_rev
