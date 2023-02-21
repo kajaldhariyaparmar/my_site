@@ -1512,7 +1512,9 @@ html {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-bottom: 71px;
 }
+
 .successDiv {
     display: flex;
     flex-direction: column;
@@ -1895,7 +1897,7 @@ html {
         position: absolute;
         top: 126px;
         right: 0;
-        width: 186px;
+        width: 104px;
     }
     .for-get-pop-up {
         display: block;
@@ -1920,7 +1922,7 @@ html {
         padding: 56px 0px 0 0;
         gap: 30px;
     }
-    
+
     .get-it-form {
         display: flex;
         flex-direction: column;
